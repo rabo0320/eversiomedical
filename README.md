@@ -87,7 +87,6 @@ DNS 반영에 보통 10분~수 시간 걸립니다. 반영된 뒤 Settings → P
 
 그 외 확인이 필요한 값:
 
-- **이메일** `contact@eversiomedical.com` — 도메인 메일이 실제로 수신되는지 확인 필요
 - **팀원 영문 이름** — EN 모드에서 쓰이는 로마자 표기 (`Jeonghyeon Lim` / `Sukho Song` / `Jongsoo Lee`). 논문에 쓰는 표기와 다르면 고쳐야 합니다
 - **아바타 이니셜** — EN 모드에서 `JL`, `SS`, `JL` 로 표시됩니다 (임정현·이종수가 겹침)
 
