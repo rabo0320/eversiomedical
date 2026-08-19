@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eversio Medical — 무마찰 전개형 요도 카테터</title>
+<meta name="description" id="metaDesc" content="Eversio Medical은 관(管)으로 배뇨·신경계 문제를 푸는 회사입니다. 밀어 넣지 않고 안에서 밖으로 자라나는 eversion 구조로 요도 손상과 감염의 원인을 해결합니다.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Eversio Medical">
+<meta property="og:title" id="ogTitle" content="Eversio Medical — 무마찰 전개형 요도 카테터">
+<meta property="og:description" id="ogDesc" content="밀어 넣지 않습니다. 안에서 밖으로 자라납니다.">
+<meta property="og:url" content="https://www.eversiomedical.com/">
+<meta name="theme-color" content="#0B1C33">
+<link rel="canonical" href="https://www.eversiomedical.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1C33;
+    --navy-2:#11304f;
+    --ink:#16202e;
+    --muted:#5c6b7e;
+    --muted-2:#8695a6;
+    --line:#e3e9f0;
+    --bg:#ffffff;
+    --bg-2:#f5f8fb;
+    --accent:#0d8f92;
+    --accent-lt:#7fd6d4;
+    --accent-bg:#e6f4f4;
+    --warn:#b4453c;
+    --maxw:1120px;
+    --r:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  section{scroll-margin-top:78px}
+  h1,h2,h3{letter-spacing:-.022em; line-height:1.2; margin:0; font-weight:600}
+  h1{font-size:clamp(2rem,4.4vw,3.35rem); font-weight:700}
+  h2{font-size:clamp(1.55rem,2.9vw,2.25rem)}
+  h3{font-size:1.05rem; font-weight:600; letter-spacing:-.012em}
+  p{margin:0}
+  a{color:inherit}
+  .eyebrow{
+    font-size:.775rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); margin-bottom:14px;
+  }
+  .lead{font-size:clamp(1.01rem,1.5vw,1.14rem); color:var(--muted); max-width:64ch}
+  .note{font-size:.78rem; color:var(--muted-2); line-height:1.6; margin-top:26px; max-width:92ch}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,.88); backdrop-filter:saturate(160%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; gap:26px; height:66px}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:700; letter-spacing:-.02em; font-size:1.02rem; color:var(--navy)}
+  .brand svg{width:26px; height:26px; color:var(--accent); flex:none}
+  .brand span{white-space:nowrap}
+  .brand i{font-style:normal; font-weight:500; color:var(--muted)}
+  .nav-links{display:flex; gap:24px; margin-left:auto}
+  .nav-links a{
+    text-decoration:none; font-size:.91rem; font-weight:500; color:var(--muted);
+    padding:6px 0; border-bottom:2px solid transparent; transition:color .18s,border-color .18s; white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--navy); border-color:var(--accent)}
+  .lang{display:flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; flex:none}
+  .lang button{
+    font:inherit; font-size:.76rem; font-weight:600; letter-spacing:.04em;
+    padding:5px 11px; border:0; background:transparent; color:var(--muted); cursor:pointer; transition:.18s;
+  }
+  .lang button[aria-pressed="true"]{background:var(--navy); color:#fff}
+  .burger{display:none; margin-left:auto; background:none; border:1px solid var(--line); border-radius:9px; width:38px; height:34px; cursor:pointer; align-items:center; justify-content:center}
+  .burger svg{width:18px;height:18px;color:var(--navy)}
+
+  /* ---------- hero ---------- */
+  .hero{background:linear-gradient(158deg,#0B1C33 0%,#11304f 58%,#0f3f4e 100%); color:#fff; overflow:hidden}
+  .hero .wrap{display:grid; grid-template-columns:1.03fr .97fr; gap:54px; align-items:center; padding-top:80px; padding-bottom:80px}
+  .hero .eyebrow{color:var(--accent-lt)}
+  .hero h1{color:#fff}
+  .hero p.sub{margin-top:22px; color:#b6c6d8; font-size:1.05rem; max-width:52ch}
+  .tagline{
+    margin-top:26px; padding-left:16px; border-left:2px solid rgba(127,214,212,.55);
+    color:#dceaf5; font-size:.98rem; font-weight:500;
+  }
+  .cta{display:flex; gap:12px; margin-top:34px; flex-wrap:wrap}
+  .btn{display:inline-block; text-decoration:none; font-size:.94rem; font-weight:600; padding:12px 22px; border-radius:999px; transition:.18s; border:1px solid transparent}
+  .btn-p{background:var(--accent-lt); color:#04302f}
+  .btn-p:hover{background:#a6e6e4}
+  .btn-s{border-color:rgba(255,255,255,.3); color:#dbe6f2}
+  .btn-s:hover{border-color:#fff; background:rgba(255,255,255,.07)}
+  .hero-viz{width:100%; height:auto; display:block}
+  .grow{stroke-dasharray:1000; animation:grow 6.5s linear infinite}
+  @keyframes grow{
+    0%{stroke-dashoffset:1000; opacity:1}
+    56%{stroke-dashoffset:0; opacity:1}
+    84%{stroke-dashoffset:0; opacity:1}
+    100%{stroke-dashoffset:0; opacity:0}
+  }
+
+  /* ---------- sections ---------- */
+  .sec{padding:92px 0}
+  .sec-alt{background:var(--bg-2); border-block:1px solid var(--line)}
+  .sec-dark{background:var(--navy); color:#fff}
+  .sec-dark h2{color:#fff}
+  .sec-dark .lead{color:#a9bccf}
+  .sec-dark .eyebrow{color:var(--accent-lt)}
+  .head{max-width:72ch; margin-bottom:50px}
+  .head h2{margin-bottom:18px}
+
+  .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:22px}
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px}
+  .card{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:26px 24px; transition:border-color .2s, transform .2s, box-shadow .2s}
+  .card:hover{border-color:#c9d7e5; transform:translateY(-2px); box-shadow:0 10px 30px -18px rgba(11,28,51,.35)}
+  .card .num{font-size:.72rem; font-weight:700; letter-spacing:.12em; color:var(--accent); margin-bottom:12px}
+  .card h3{margin-bottom:9px}
+  .card p{font-size:.94rem; color:var(--muted); line-height:1.62}
+
+  /* stats */
+  .stat{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:26px 22px}
+  .stat b{display:block; font-size:clamp(1.75rem,3.2vw,2.3rem); font-weight:700; letter-spacing:-.03em; color:var(--navy); line-height:1.1; margin-bottom:12px}
+  .stat p{font-size:.9rem; color:var(--muted); line-height:1.58}
+  .stat.hot b{color:var(--warn)}
+
+  /* ---------- diagrams ---------- */
+  .diagram{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:24px 18px 10px; margin:0 0 44px}
+  .diagram svg{width:100%; height:auto; display:block}
+  .diagram figcaption{font-size:.84rem; color:var(--muted); text-align:center; padding:10px 12px 12px; line-height:1.55}
+  .d-label{font:500 13px "Inter","Noto Sans KR",sans-serif; fill:#455568}
+  .d-title{font:700 14px "Inter","Noto Sans KR",sans-serif; fill:#0B1C33}
+  .d-sub{font:400 12px "Inter","Noto Sans KR",sans-serif; fill:#6b7b8d}
+  .d-lead{stroke:#a9b8c8; stroke-width:1; stroke-dasharray:2 3}
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin:0 0 24px}
+  .step{margin:0; background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:16px 18px 24px}
+  .step svg{width:100%; height:auto; display:block}
+  .step figcaption{text-align:center; margin-top:4px}
+  .step .st{display:block; font-weight:700; font-size:.99rem; color:var(--navy); letter-spacing:-.015em; margin-bottom:6px}
+  .step .sd{display:block; font-size:.87rem; color:var(--muted); line-height:1.55}
+  .dcap{font-size:.87rem; color:var(--muted); line-height:1.62; text-align:center; max-width:80ch; margin:0 auto 46px}
+
+  /* ---------- approach comparison ---------- */
+  .vs{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:14px}
+  .vs > div{border-radius:var(--r); padding:28px 26px; border:1px solid var(--line); background:#fff}
+  .vs .b{background:var(--navy); border-color:var(--navy); color:#fff}
+  .vs h3{margin-bottom:6px}
+  .vs .tag{font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:14px; color:var(--muted-2)}
+  .vs .b .tag{color:var(--accent-lt)}
+  .vs ul{margin:16px 0 0; padding:0; list-style:none}
+  .vs li{font-size:.93rem; color:var(--muted); line-height:1.6; padding:9px 0 9px 20px; position:relative; border-top:1px solid var(--line)}
+  .vs .b li{color:#b6c6d8; border-color:rgba(255,255,255,.12)}
+  .vs li::before{content:""; position:absolute; left:2px; top:18px; width:6px; height:6px; border-radius:50%; background:#c5d0dc}
+  .vs .b li::before{background:var(--accent-lt)}
+  .evidence{
+    margin-top:28px; border-left:3px solid var(--accent); background:var(--accent-bg);
+    padding:20px 24px; border-radius:0 10px 10px 0;
+  }
+  .evidence strong{display:block; font-size:.95rem; color:var(--navy); margin-bottom:5px}
+  .evidence p{font-size:.9rem; color:#3e5a5c; line-height:1.6}
+
+  /* ---------- products ---------- */
+  .prod{display:grid; grid-template-columns:repeat(2,1fr); gap:22px}
+  .prod > div{border:1px solid var(--line); border-radius:var(--r); padding:30px 28px; background:#fff}
+  .prod .badge{display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:999px; margin-bottom:16px}
+  .prod .badge.lead-b{background:var(--accent-bg); color:#0a6f72}
+  .prod .badge.next-b{background:#f0f3f7; color:var(--muted)}
+  .prod h3{font-size:1.35rem; letter-spacing:-.03em; margin-bottom:8px}
+  .prod .kicker{font-size:.95rem; color:var(--accent); font-weight:500; margin-bottom:14px}
+  .prod p{font-size:.94rem; color:var(--muted); line-height:1.62}
+
+  /* ---------- assets ---------- */
+  .assets{display:grid; grid-template-columns:repeat(4,1fr); gap:22px}
+  .asset{border-top:2px solid rgba(127,214,212,.4); padding-top:18px}
+  .asset .k{font-size:.74rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-lt); margin-bottom:10px}
+  .asset .v{font-size:1.02rem; font-weight:600; color:#fff; letter-spacing:-.015em; margin-bottom:6px; line-height:1.4}
+  .asset .d{font-size:.85rem; color:#9db0c4; line-height:1.55}
+
+  /* ---------- team ---------- */
+  .team{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+  .person{border:1px solid var(--line); border-radius:var(--r); padding:28px 26px; background:#fff}
+  .person .av{
+    width:48px; height:48px; border-radius:50%; background:var(--accent-bg); color:#0a6f72;
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.05rem; margin-bottom:18px; letter-spacing:-.02em;
+  }
+  .person h3{font-size:1.15rem; margin-bottom:4px}
+  .person .role{font-size:.87rem; font-weight:600; color:var(--accent); margin-bottom:10px}
+  .person p{font-size:.9rem; color:var(--muted); line-height:1.6}
+
+  /* ---------- timeline ---------- */
+  .tl{display:grid; grid-template-columns:repeat(4,1fr); gap:0}
+  .tl > div{padding:26px 22px 0 0; border-top:2px solid var(--line); position:relative}
+  .tl > div::before{content:""; position:absolute; top:-6px; left:0; width:10px; height:10px; border-radius:50%; background:#fff; border:2px solid var(--line)}
+  .tl > div.now{border-top-color:var(--accent)}
+  .tl > div.now::before{background:var(--accent); border-color:var(--accent)}
+  .tl .when{font-size:.8rem; font-weight:700; letter-spacing:.08em; color:var(--accent); margin-bottom:8px}
+  .tl h3{font-size:.99rem; margin-bottom:7px}
+  .tl p{font-size:.88rem; color:var(--muted); line-height:1.58; padding-right:14px}
+
+  /* ---------- company facts ---------- */
+  .co{display:grid; grid-template-columns:1.12fr .88fr; gap:60px; align-items:start}
+  .status{margin-top:64px; padding-top:52px; border-top:1px solid var(--line)}
+  .co p + p{margin-top:18px}
+  .facts{border-top:1px solid var(--line); margin:0}
+  .facts div{display:flex; justify-content:space-between; gap:20px; padding:15px 0; border-bottom:1px solid var(--line); font-size:.93rem}
+  .facts dt{color:var(--muted)}
+  .facts dd{margin:0; font-weight:500; text-align:right}
+  .tbd{display:inline-block; border:1px dashed #c3cedb; border-radius:6px; padding:1px 9px; font-size:.82rem; font-weight:500; color:#8a99ab; background:#f8fafc}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--navy); color:#fff; padding:88px 0}
+  .contact h2{color:#fff; margin-bottom:16px}
+  .contact p{color:#b6c6d8; max-width:54ch}
+  .mail{display:inline-block; margin-top:30px; font-size:clamp(1.1rem,2.4vw,1.6rem); font-weight:600; color:var(--accent-lt); text-decoration:none; border-bottom:1px solid rgba(127,214,212,.4); padding-bottom:3px}
+  .mail:hover{border-color:var(--accent-lt)}
+
+  /* ---------- footer ---------- */
+  footer{background:#061223; color:#7f90a5; padding:44px 0; font-size:.85rem; line-height:1.7}
+  footer .fw{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap}
+  .disclaimer{max-width:66ch; color:#63768c; font-size:.79rem}
+
+  @media (max-width:980px){
+    .grid-4,.assets{grid-template-columns:repeat(2,1fr)}
+    .tl{grid-template-columns:repeat(2,1fr); gap:0 22px}
+    .tl > div{padding-bottom:26px}
+    .team{grid-template-columns:1fr}
+  }
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr; gap:38px; padding-top:58px; padding-bottom:62px}
+    .co{grid-template-columns:1fr; gap:36px}
+    .grid-3,.grid-2,.vs,.prod,.steps{grid-template-columns:1fr}
+    .sec{padding:66px 0}
+    .nav-links{
+      display:none; position:absolute; top:66px; left:0; right:0; flex-direction:column; gap:0;
+      background:#fff; border-bottom:1px solid var(--line); padding:8px 24px 16px;
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{padding:12px 0; border-bottom:1px solid var(--line)}
+    .burger{display:flex}
+    .lang{order:3}
+    .nav{gap:14px}
+    .brand{font-size:.95rem}
+  }
+  @media (max-width:560px){
+    .grid-4,.assets,.tl{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .grow{animation:none; stroke-dasharray:none}
+    .card:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M6 7 H18 A9 9 0 0 1 18 25 H6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5 13 H17 A3 3 0 0 1 17 19 H10.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+      </svg>
+      <span>Eversio <i>Medical</i></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#problem" data-ko="문제" data-en="Problem">문제</a>
+      <a href="#approach" data-ko="접근" data-en="Approach">접근</a>
+      <a href="#technology" data-ko="기술" data-en="Technology">기술</a>
+      <a href="#products" data-ko="제품" data-en="Products">제품</a>
+      <a href="#team" data-ko="팀" data-en="Team">팀</a>
+      <a href="#company" data-ko="회사" data-en="Company">회사</a>
+      <a href="#contact" data-ko="문의" data-en="Contact">문의</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="btnKo" aria-pressed="true">KO</button>
+      <button type="button" id="btnEn" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-ko="무마찰 전개형 요도 카테터" data-en="Friction-free everting urinary catheter">무마찰 전개형 요도 카테터</div>
+      <h1 data-ko="밀어 넣지 않습니다.<br>안에서 밖으로<br>자라납니다." data-en="We do not push it in.<br>It grows, from the<br>inside out.">밀어 넣지 않습니다.<br>안에서 밖으로<br>자라납니다.</h1>
+      <p class="sub" data-ko="Eversio Medical은 척수손상과 고령화에서 비롯되는 배뇨·신경계 문제를 최소침습 eversion 카테터로 해결합니다. 첫 제품은 무마찰 전개형 요도 카테터, Eversio-U 입니다." data-en="Eversio Medical addresses the voiding and neurological problems that follow spinal cord injury and ageing, using a minimally invasive eversion catheter. Our first product is Eversio-U, a friction-free everting urinary catheter.">Eversio Medical은 최소침습 eversion 카테터를 개발합니다.</p>
+      <p class="tagline" data-ko="관(管)으로 배뇨·신경계 문제를 푸는 회사" data-en="A company solving voiding and neurological problems with tubes">관(管)으로 배뇨·신경계 문제를 푸는 회사</p>
+      <div class="cta">
+        <a class="btn btn-p" href="#technology" data-ko="기술 살펴보기" data-en="See the technology">기술 살펴보기</a>
+        <a class="btn btn-s" href="#contact" data-ko="문의하기" data-en="Get in touch">문의하기</a>
+      </div>
+    </div>
+
+    <div>
+      <svg class="hero-viz" viewBox="0 0 720 340" role="img" aria-labelledby="heroVizT">
+        <title id="heroVizT" data-ko="요도를 따라 팁에서부터 전개되는 eversion 카테터" data-en="An eversion catheter deploying from its tip along the urethra">요도를 따라 팁에서부터 전개되는 eversion 카테터</title>
+        <defs>
+          <linearGradient id="gCath" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0d8f92"/><stop offset="100%" stop-color="#9ce8e6"/>
+          </linearGradient>
+          <filter id="fGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="7" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- lumen -->
+        <path d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96"
+              fill="none" stroke="rgba(255,255,255,.09)" stroke-width="40" stroke-linecap="round"/>
+        <!-- bladder -->
+        <ellipse cx="642" cy="92" rx="56" ry="50" fill="rgba(255,255,255,.055)" stroke="rgba(255,255,255,.16)" stroke-width="2"/>
+        <!-- deploying catheter -->
+        <path class="grow" pathLength="1000"
+              d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96"
+              fill="none" stroke="url(#gCath)" stroke-width="14" stroke-linecap="round"/>
+        <circle r="8" fill="#ccf7f5" filter="url(#fGlow)">
+          <animateMotion dur="6.5s" repeatCount="indefinite" calcMode="linear"
+                         keyPoints="0;1;1;1" keyTimes="0;0.56;0.84;1">
+            <mpath href="#heroPath" xlink:href="#heroPath"/>
+          </animateMotion>
+          <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+                   values="1;1;1;0" keyTimes="0;0.56;0.84;1" calcMode="linear"/>
+        </circle>
+        <path id="heroPath" d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96" fill="none" stroke="none"/>
+        <text x="642" y="164" text-anchor="middle" fill="rgba(255,255,255,.5)" style="font:500 13px Inter,'Noto Sans KR',sans-serif"
+              data-ko="방광" data-en="Bladder">방광</text>
+        <text x="150" y="306" fill="rgba(255,255,255,.5)" style="font:500 13px Inter,'Noto Sans KR',sans-serif"
+              data-ko="요도" data-en="Urethra">요도</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="sec sec-alt" id="problem">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-ko="문제" data-en="The problem">문제</div>
+      <h2 data-ko="지금 이 순간에도, 1초에 한 번 넘게 카테터가 요도 안으로 밀려 들어가고 있습니다." data-en="Right now, more than once a second, a catheter is being pushed into a urethra in Korea.">지금 이 순간에도, 1초에 한 번 넘게 카테터가 요도 안으로 밀려 들어가고 있습니다.</h2>
+      <p class="lead" data-ko="국내 급여 등록 자가도뇨 환자 약 2.6만 명, 1일 6개 한도를 적용하면 연간 약 5,700만 회입니다. 이 숫자들의 뿌리는 단 하나 — 수십 년째 그대로인 밀어 넣는 삽입 방식입니다." data-en="With roughly 26,000 reimbursement-registered self-catheterisation patients in Korea and a daily limit of six catheters, that is about 57 million insertions a year. All of it traces back to one thing: an insertion method that has not changed in decades — pushing.">국내 급여 등록 자가도뇨 환자 약 2.6만 명 기준, 연간 약 5,700만 회입니다.</p>
+    </div>
+
+    <div class="grid-4">
+      <div class="stat">
+        <b data-ko="2.6만 명" data-en="26,000">2.6만 명</b>
+        <p data-ko="급여 등록 자가도뇨 환자. 국내 신경인성 방광 진료인원은 약 42만 명입니다." data-en="Reimbursement-registered self-catheterisation patients. About 420,000 people are treated for neurogenic bladder in Korea.">급여 등록 자가도뇨 환자.</p>
+      </div>
+      <div class="stat">
+        <b data-ko="1,500회+" data-en="1,500+">1,500회+</b>
+        <p data-ko="환자 1인당 연간 삽입 횟수. 하루 4~6회를 평생 반복합니다." data-en="Insertions per patient per year — four to six times a day, repeated for life.">환자 1인당 연간 삽입 횟수.</p>
+      </div>
+      <div class="stat hot">
+        <b data-ko="38.8%" data-en="38.8%">38.8%</b>
+        <p data-ko="척수손상 자가도뇨 환자 중 1년 내 요로감염으로 치료받은 비율." data-en="Share of spinal-cord-injury self-catheterisation patients treated for a urinary tract infection within one year.">1년 내 요로감염 치료 비율.</p>
+      </div>
+      <div class="stat hot">
+        <b data-ko="78%" data-en="78%">78%</b>
+        <p data-ko="외상성 삽입 손상 환자의 요도협착 진행률. 협착이 다음 삽입을 더 어렵게 만드는 악순환입니다." data-en="Progression to urethral stricture after traumatic insertion injury — and each stricture makes the next insertion harder.">외상성 삽입 손상 환자의 요도협착 진행률.</p>
+      </div>
+    </div>
+
+    <p class="note" data-ko="출처 — 삽입 빈도: 급여 등록 후천성 신경인성 방광 환자 약 2.6만 명(병원신문, 2017) × 1일 6개 한도. 환자 수: 신경인성 방광 진료인원 약 42만 명(2016, 건강보험 진료통계). 요로감염: 척수손상 CIC 환자 1년 내 UTI 치료율 38.8%. 요도협착: 외상성 삽입 손상 장기추적 결과 78% 진행." data-en="Sources — Insertion frequency: approx. 26,000 reimbursement-registered patients with acquired neurogenic bladder (Korean Hospital News, 2017) × daily limit of six. Patient count: approx. 420,000 treated for neurogenic bladder (2016, National Health Insurance statistics). UTI: 38.8% of spinal-cord-injury CIC patients treated within one year. Stricture: 78% progression in long-term follow-up of traumatic insertion injury.">출처 안내</p>
+  </div>
+</section>
+
+<!-- ================= APPROACH ================= -->
+<section class="sec" id="approach">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-ko="접근" data-en="Approach">접근</div>
+      <h2 data-ko="코팅은 증상을 공격합니다. 원인은 삽입 구조에 있습니다." data-en="Coatings attack the symptom. The cause is the insertion mechanism.">코팅은 증상을 공격합니다. 원인은 삽입 구조에 있습니다.</h2>
+      <p class="lead" data-ko="밀어 넣는 삽입이 요도벽을 긁고, 그 마찰 손상이 협착과 거짓통로를 만들며, 손상 부위가 세균 침투 입구가 되어 감염(CAUTI)으로 이어집니다. 지난 수십 년간 업계의 개선은 대부분 코팅과 소재에 집중되어 왔습니다." data-en="Pushing scrapes the urethral wall. That friction damage produces strictures and false passages, and the damaged surface becomes an entry point for bacteria, leading to catheter-associated infection. For decades, industry improvement has concentrated on coatings and materials.">밀어 넣는 삽입이 요도벽을 긁고, 그 손상이 협착과 감염으로 이어집니다.</p>
+    </div>
+
+    <div class="vs">
+      <div>
+        <div class="tag" data-ko="업계 표준" data-en="Industry standard">업계 표준</div>
+        <h3 data-ko="코팅·소재 중심" data-en="Coating and material driven">코팅·소재 중심</h3>
+        <ul>
+          <li data-ko="친수성 코팅으로 마찰계수를 낮춤" data-en="Hydrophilic coatings to lower the friction coefficient">친수성 코팅으로 마찰계수를 낮춤</li>
+          <li data-ko="항균 코팅·노블메탈 합금으로 감염 저감 시도" data-en="Antimicrobial coatings and noble-metal alloys to reduce infection">항균 코팅·노블메탈 합금으로 감염 저감 시도</li>
+          <li data-ko="100% 실리콘 등 소재 전환" data-en="Material substitution such as all-silicone constructions">100% 실리콘 등 소재 전환</li>
+          <li data-ko="삽입 방식 자체는 그대로 — 여전히 밀어 넣습니다" data-en="The insertion method itself is unchanged — it is still pushed">삽입 방식 자체는 그대로 — 여전히 밀어 넣습니다</li>
+        </ul>
+      </div>
+      <div class="b">
+        <div class="tag" data-ko="Eversio-U" data-en="Eversio-U">Eversio-U</div>
+        <h3 data-ko="구조 중심" data-en="Structure driven">구조 중심</h3>
+        <ul>
+          <li data-ko="튜브가 안에서 밖으로 뒤집히며 전개" data-en="The tube everts, growing from the inside out">튜브가 안에서 밖으로 뒤집히며 전개</li>
+          <li data-ko="요도벽과의 상대 이동이 거의 없어 마찰 손상을 줄임" data-en="Almost no relative motion against the urethral wall, reducing friction damage">요도벽과의 상대 이동이 거의 없어 마찰 손상을 줄임</li>
+          <li data-ko="약물·코팅이 아닌 삽입 구조 자체로 손상·감염 경로를 낮춤" data-en="Lowers the damage and infection pathway through structure, not drugs or coatings">약물이 아닌 구조로 손상·감염 경로를 낮춤</li>
+          <li data-ko="전개 후단부가 방광 내벽에 밀착해 스스로 고정" data-en="The deployed end seats against the bladder wall and holds its own position">전개 후단부가 방광 내벽에 밀착해 스스로 고정</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="evidence">
+      <strong data-ko="코팅만으로는 충분하지 않다는 근거" data-en="The evidence that coatings alone are not enough">코팅만으로는 충분하지 않다는 근거</strong>
+      <p data-ko="영국 다기관 무작위 대조시험(2012, 환자 7,102명)에서 은합금 코팅 카테터의 감염률은 12.5%, 일반 카테터는 12.6%로 사실상 차이가 없었습니다. 세계 최대 규모의 RCT가 내린 결론입니다." data-en="In a UK multicentre randomised controlled trial (2012, n = 7,102), silver-alloy coated catheters showed a 12.5% infection rate versus 12.6% for standard catheters — effectively no difference. That is the conclusion of the largest trial of its kind.">영국 다기관 RCT(2012, n=7,102): 은합금 코팅 12.5% vs 일반 12.6%.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TECHNOLOGY ================= -->
+<section class="sec sec-alt" id="technology">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-ko="기술" data-en="Technology">기술</div>
+      <h2 data-ko="Eversion — 튜브가 뒤집히며 스스로 자라납니다." data-en="Eversion — the tube turns itself inside out and grows.">Eversion — 튜브가 뒤집히며 스스로 자라납니다.</h2>
+      <p class="lead" data-ko="얇은 벽의 튜브를 안쪽으로 접어 넣고 내부에 유체를 공급합니다. 압력이 접힘부를 앞으로 밀어내면서 새로운 튜브 표면은 오직 선단부에서만 나타납니다. 이미 요도벽에 닿아 있는 부분은 전진 과정에서 움직이지 않습니다." data-en="A thin-walled tube is folded back on itself and fluid is supplied inside. Pressure drives the fold forward, so new tube surface appears only at the leading edge. The part already resting against the urethral wall does not move as the device advances.">얇은 튜브를 접어 넣고 유체를 공급하면, 접힘부가 앞으로 이동하며 전개됩니다.</p>
+    </div>
+
+    <!-- 3-step principle -->
+    <div class="steps">
+      <figure class="step">
+        <svg viewBox="0 0 280 170" role="img" aria-label="Step 1">
+          <path d="M20 57 H150 C166 57 166 75 150 75 H20 Z" fill="#dff0f5"/>
+          <path d="M20 113 H150 C166 113 166 95 150 95 H20 Z" fill="#dff0f5"/>
+          <rect x="20" y="75" width="135" height="20" fill="#eef4f9"/>
+          <path d="M20 57 H150 C166 57 166 75 150 75 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M20 113 H150 C166 113 166 95 150 95 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
+          <line x1="38" y1="85" x2="130" y2="85" stroke="#2f7fd6" stroke-width="2.4" marker-end="url(#mFlow)"/>
+        </svg>
+        <figcaption>
+          <span class="st" data-ko="① 유체 공급" data-en="1 · Fluid supply">① 유체 공급</span>
+          <span class="sd" data-ko="내부 유체 공급이 시작됩니다." data-en="Internal fluid supply begins.">내부 유체 공급이 시작됩니다.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="step">
+        <svg viewBox="0 0 280 170" role="img" aria-label="Step 2">
+          <path d="M20 57 H215 C231 57 231 75 215 75 H20 Z" fill="#dff0f5"/>
+          <path d="M20 113 H215 C231 113 231 95 215 95 H20 Z" fill="#dff0f5"/>
+          <rect x="20" y="75" width="200" height="20" fill="#eef4f9"/>
+          <path d="M20 57 H215 C231 57 231 75 215 75 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M20 113 H215 C231 113 231 95 215 95 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
+          <line x1="38" y1="85" x2="145" y2="85" stroke="#2f7fd6" stroke-width="2.4" marker-end="url(#mFlow)"/>
+          <path d="M201 73 C219 67 227 59 221 51" fill="none" stroke="#0d8f92" stroke-width="2.2" marker-end="url(#mRoll)"/>
+          <path d="M201 97 C219 103 227 111 221 119" fill="none" stroke="#0d8f92" stroke-width="2.2" marker-end="url(#mRoll)"/>
+        </svg>
+        <figcaption>
+          <span class="st" data-ko="② Eversion 전개" data-en="2 · Eversion deployment">② Eversion 전개</span>
+          <span class="sd" data-ko="내부 압력으로 선단부가 뒤집히며 무마찰로 전진합니다." data-en="Internal pressure everts the tip, which advances without friction.">내부 압력으로 선단부가 뒤집히며 무마찰로 전진합니다.</span>
+        </figcaption>
+      </figure>
+
+      <figure class="step">
+        <svg viewBox="0 0 280 170" role="img" aria-label="Step 3">
+          <ellipse cx="200" cy="85" rx="55" ry="48" fill="#fdf1f1" stroke="#e3a8a5" stroke-width="3.5"/>
+          <circle cx="200" cy="85" r="30" fill="#dff0f5" stroke="#0d8f92" stroke-width="3"/>
+          <rect x="20" y="75" width="130" height="20" fill="#eef4f9"/>
+          <path d="M20 57 H140 C158 57 162 66 166 72" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linecap="round"/>
+          <path d="M20 113 H140 C158 113 162 104 166 98" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linecap="round"/>
+          <line x1="38" y1="85" x2="128" y2="85" stroke="#2f7fd6" stroke-width="2.4" marker-end="url(#mFlow)"/>
+          <text class="d-label" x="200" y="26" text-anchor="middle" fill="#b4453c" data-ko="방광" data-en="Bladder">방광</text>
+        </svg>
+        <figcaption>
+          <span class="st" data-ko="③ 방광 도달 · 고정" data-en="3 · Arrival and fixation">③ 방광 도달 · 고정</span>
+          <span class="sd" data-ko="전개 후단부가 방광 내벽에 밀착해 위치를 고정합니다." data-en="The deployed end seats against the bladder wall and holds position.">전개 후단부가 방광 내벽에 밀착해 위치를 고정합니다.</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+      <marker id="mFlow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2f7fd6"/></marker>
+      <marker id="mRoll" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0d8f92"/></marker>
+    </defs></svg>
+
+    <p class="dcap" data-ko="단면 모식도. 외벽(굵은 선)은 요도벽에 닿은 채 정지해 있고, 내부 압력이 선단의 접힘부만 앞으로 밀어냅니다. 중심부에는 유체 공급과 배출을 위한 채널이 그대로 남습니다." data-en="Schematic cross-sections. The outer wall (heavy line) rests against the urethra and stays still, while internal pressure drives only the fold at the tip forward. A channel remains open along the centre for fluid supply and drainage.">단면 모식도.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="num">A</div>
+        <h3 data-ko="무마찰 전개" data-en="Friction-free deployment">무마찰 전개</h3>
+        <p data-ko="튜브가 안에서 밖으로 뒤집혀 자라나기 때문에 요도벽과의 상대 이동이 거의 없습니다. 밀어 넣는 삽입에서 손상을 만드는 벽면 마찰이 발생하지 않습니다." data-en="Because the tube grows by everting from the inside out, there is almost no relative motion against the urethral wall — removing the wall friction that causes damage during pushed insertion.">요도벽과의 상대 이동이 거의 없습니다.</p>
+      </div>
+      <div class="card">
+        <div class="num">B</div>
+        <h3 data-ko="방광 내 자가 고정 전개" data-en="Self-anchoring deployment in the bladder">방광 내 자가 고정 전개</h3>
+        <p data-ko="전개된 후단부가 방광 내벽에 밀착하면서 별도의 조작 없이 위치가 안정적으로 고정됩니다." data-en="The deployed end seats against the bladder wall, holding position stably without a separate anchoring step.">전개 후단부가 방광 내벽에 밀착해 고정됩니다.</p>
+      </div>
+      <div class="card">
+        <div class="num">C</div>
+        <h3 data-ko="구조로 감염 저감" data-en="Infection reduction by structure">구조로 감염 저감</h3>
+        <p data-ko="코팅이나 약물이 아니라 삽입 구조 자체로 손상 경로를 줄입니다. 마찰 손상 부위가 줄어들면 세균이 침투할 입구도 줄어듭니다." data-en="The damage pathway is reduced by the insertion structure itself rather than by a coating or drug. Fewer friction injuries mean fewer entry points for bacteria.">삽입 구조 자체로 손상 경로를 줄입니다.</p>
+      </div>
+    </div>
+
+    <div class="grid-4" style="margin-top:22px">
+      <div class="card"><div class="num" data-ko="구조 01" data-en="Structure 01">구조 01</div><h3 data-ko="본체부" data-en="Main body">본체부</h3><p data-ko="Eversion 전개 및 내부 채널 형성" data-en="Eversion deployment and formation of the internal channel">Eversion 전개 및 내부 채널 형성</p></div>
+      <div class="card"><div class="num" data-ko="구조 02" data-en="Structure 02">구조 02</div><h3 data-ko="확장부" data-en="Expansion section">확장부</h3><p data-ko="전개 전방까지 위치를 고정" data-en="Holds position through to the leading edge of deployment">전개 전방까지 위치를 고정</p></div>
+      <div class="card"><div class="num" data-ko="구조 03" data-en="Structure 03">구조 03</div><h3 data-ko="통로부" data-en="Supply channel">통로부</h3><p data-ko="내외부 유체 공급 경로" data-en="Internal and external fluid supply path">내외부 유체 공급 경로</p></div>
+      <div class="card"><div class="num" data-ko="구조 04" data-en="Structure 04">구조 04</div><h3 data-ko="유출부" data-en="Outlet">유출부</h3><p data-ko="유체 유도 및 배출 포트" data-en="Fluid guidance and drainage port">유체 유도 및 배출 포트</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-ko="제품" data-en="Products">제품</div>
+      <h2 data-ko="하나의 eversion 구조에서 출발하는 제품군." data-en="A product family from one eversion structure.">하나의 eversion 구조에서 출발하는 제품군.</h2>
+      <p class="lead" data-ko="간헐적 자가도뇨용 1-way 제품을 먼저 제품화하고, 동일한 eversion 구조를 유치형과 상부 요로 시술로 확장합니다. 모든 제품은 연구·개발 단계에 있습니다." data-en="We are commercialising a 1-way product for intermittent self-catheterisation first, then extending the same eversion structure to indwelling and upper urinary tract procedures. All products are at the research and development stage.">1-way 제품을 먼저 제품화하고, 동일 구조를 확장합니다.</p>
+    </div>
+    <div class="prod">
+      <div>
+        <span class="badge lead-b" data-ko="리드 제품" data-en="Lead product">리드 제품</span>
+        <h3>Eversio-U</h3>
+        <div class="kicker" data-ko="무마찰 전개형 요도 카테터" data-en="Friction-free everting urinary catheter">무마찰 전개형 요도 카테터</div>
+        <p data-ko="간헐적 자가도뇨(1-way)용으로 먼저 제품화하고, 이후 동일한 eversion 구조를 2·3-way 유치형(Foley)으로 단계 확장합니다. 하루 4~6회, 평생 반복되는 삽입의 부담을 구조에서부터 줄이는 것이 목표입니다." data-en="First commercialised for intermittent self-catheterisation (1-way), then extended step by step to 2- and 3-way indwelling Foley configurations using the same eversion structure. The goal is to reduce the burden of an insertion repeated four to six times a day, for life — starting from the structure itself.">간헐적 자가도뇨(1-way)용으로 먼저 제품화합니다.</p>
+      </div>
+      <div>
+        <span class="badge next-b" data-ko="확장 제품" data-en="Extension">확장 제품</span>
+        <h3>Eversio-UAS</h3>
+        <div class="kicker" data-ko="무마찰 전개형 요관 접근 시스템" data-en="Friction-free everting ureteral access system">무마찰 전개형 요관 접근 시스템</div>
+        <p data-ko="전개 길이를 연장해 신장·요관 시술 접근까지 확장하는 제품입니다. 요도 카테터에서 검증한 동일한 eversion 구조를 상부 요로로 옮깁니다." data-en="Extending the deployment length to reach kidney and ureteral procedures, carrying the same eversion structure validated in the urinary catheter into the upper urinary tract.">전개 길이를 연장해 신장·요관 시술 접근까지 확장합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ASSETS ================= -->
+<section class="sec sec-dark">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-ko="핵심 자산" data-en="Core assets">핵심 자산</div>
+      <h2 data-ko="원천연구와 특허, 그리고 검증 파트너." data-en="Foundational research, patents, and validation partners.">원천연구와 특허, 그리고 검증 파트너.</h2>
+    </div>
+    <div class="assets">
+      <div class="asset">
+        <div class="k" data-ko="원천연구" data-en="Foundational research">원천연구</div>
+        <div class="v">Science Robotics (2023)</div>
+        <div class="d" data-ko="Eversion 구동에 관한 원천 연구 성과에서 출발했습니다." data-en="The technology originates from published research on eversion actuation.">Eversion 구동 원천 연구.</div>
+      </div>
+      <div class="asset">
+        <div class="k" data-ko="특허" data-en="Patents">특허</div>
+        <div class="v" data-ko="특허 2건" data-en="2 patents">특허 2건</div>
+        <div class="d">PCT/KR2026/001910<br>EP4518955B1</div>
+      </div>
+      <div class="asset">
+        <div class="k" data-ko="임상 협력" data-en="Clinical partners">임상 협력</div>
+        <div class="v" data-ko="협력 병원 2곳" data-en="2 partner hospitals">협력 병원 2곳</div>
+        <div class="d" data-ko="연세대 세브란스병원 · 서울아산병원" data-en="Severance Hospital, Yonsei University · Asan Medical Center">연세대 세브란스병원 · 서울아산병원</div>
+      </div>
+      <div class="asset">
+        <div class="k" data-ko="제조 인프라" data-en="Manufacturing">제조 인프라</div>
+        <div class="v" data-ko="협력 인프라 3곳" data-en="3 partner facilities">협력 인프라 3곳</div>
+        <div class="d" data-ko="오송 KBIOHealth · DGIST 차세대반도체융합연구소 · 김해 의생명산업진흥원" data-en="KBIOHealth Osong · DGIST Convergence Research Institute · Gimhae Biomedical Industry Promotion Agency">오송 KBIOHealth · DGIST · 김해 의생명산업진흥원</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="sec" id="team">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow" data-ko="팀" data-en="Team">팀</div>
+      <h2 data-ko="로보틱스 연구와 비뇨의학 임상이 함께 만듭니다." data-en="Built by robotics research and urology practice together.">로보틱스 연구와 비뇨의학 임상이 함께 만듭니다.</h2>
+    </div>
+    <div class="team">
+      <div class="person">
+        <div class="av" data-ko="임" data-en="JL">임</div>
+        <h3 data-ko="임정현" data-en="Jeonghyeon Lim">임정현</h3>
+        <div class="role" data-ko="CEO · DGIST 대학원 연구원" data-en="CEO · Graduate researcher, DGIST">CEO · DGIST 대학원 연구원</div>
+        <p data-ko="Eversion 로봇 미세제작 및 전극 개발을 담당해 왔습니다." data-en="Works on microfabrication of eversion robots and electrode development.">Eversion 로봇 미세제작 · 전극 개발</p>
+      </div>
+      <div class="person">
+        <div class="av" data-ko="송" data-en="SS">송</div>
+        <h3 data-ko="송석호" data-en="Sukho Song">송석호</h3>
+        <div class="role" data-ko="CTO · DGIST 교수" data-en="CTO · Professor, DGIST">CTO · DGIST 교수</div>
+        <p data-ko="소프트 로보틱스와 의료기기 연구를 총괄합니다." data-en="Leads the soft robotics and medical device research programme.">소프트로보틱스 · 의료기기 연구 총괄</p>
+      </div>
+      <div class="person">
+        <div class="av" data-ko="이" data-en="JL">이</div>
+        <h3 data-ko="이종수" data-en="Jongsoo Lee">이종수</h3>
+        <div class="role" data-ko="Medical Advisor · 세브란스 비뇨의학과 교수" data-en="Medical Advisor · Professor of Urology, Severance Hospital">Medical Advisor · 세브란스 비뇨의학과 교수</div>
+        <p data-ko="의료기기 검증과 임상시험을 총괄합니다." data-en="Oversees device validation and clinical study design.">의료기기 검증 및 임상시험 총괄</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPANY / STATUS ================= -->
+<section class="sec sec-alt" id="company">
+  <div class="wrap">
+   <div class="co">
+    <div>
+      <div class="eyebrow" data-ko="회사" data-en="Company">회사</div>
+      <h2 style="margin-bottom:22px" data-ko="무마찰 전개가 표준이 되는 카테터 시장을 만듭니다." data-en="Making friction-free deployment the standard in catheters.">무마찰 전개가 표준이 되는 카테터 시장을 만듭니다.</h2>
+      <p data-ko="Eversio Medical은 DGIST에서 출발한 초기 단계 의료기기 팀입니다. Eversion 구동에 관한 원천 연구를 임상에서 쓰일 수 있는 카테터로 옮기는 일을 합니다." data-en="Eversio Medical is an early-stage medical device team out of DGIST, translating foundational research on eversion actuation into catheters that can be used in the clinic.">Eversio Medical은 DGIST에서 출발한 초기 단계 의료기기 팀입니다.</p>
+      <p data-ko="코팅과 소재로 증상을 완화하는 대신, 삽입 구조를 바꿔 원인을 제거하는 길을 택했습니다. 설계와 해석, 그리고 요도 모형을 이용한 in-vitro 검증으로 성능을 확인한 뒤 단계적으로 인허가와 제품화로 나아갑니다." data-en="Instead of easing symptoms with coatings and materials, we chose to remove the cause by changing the insertion structure. Performance is confirmed through design, analysis, and in-vitro validation in urethral models before moving step by step toward regulatory approval and commercialisation.">삽입 구조를 바꿔 원인을 제거하는 길을 택했습니다.</p>
+
+    </div>
+
+    <div>
+      <dl class="facts">
+        <div><dt data-ko="회사명" data-en="Name">회사명</dt><dd>Eversio Medical</dd></div>
+        <div><dt data-ko="단계" data-en="Stage">단계</dt><dd data-ko="DGIST 예비창업" data-en="DGIST pre-startup">DGIST 예비창업</dd></div>
+        <div><dt data-ko="법인 설립" data-en="Incorporation">법인 설립</dt><dd><span class="tbd" data-ko="입력 필요" data-en="to be filled">입력 필요</span></dd></div>
+        <div><dt data-ko="소재지" data-en="Location">소재지</dt><dd data-ko="대구 · DGIST" data-en="Daegu · DGIST">대구 · DGIST</dd></div>
+        <div><dt data-ko="분야" data-en="Field">분야</dt><dd data-ko="비뇨기 의료기기" data-en="Urological medical devices">비뇨기 의료기기</dd></div>
+        <div><dt data-ko="리드 제품" data-en="Lead product">리드 제품</dt><dd>Eversio-U</dd></div>
+      </dl>
+    </div>
+   </div>
+
+   <div class="status">
+      <div class="eyebrow" data-ko="개발 현황" data-en="Development status">개발 현황</div>
+      <div class="tl">
+        <div class="now">
+          <div class="when">2026</div>
+          <h3 data-ko="Working sample" data-en="Working sample">Working sample</h3>
+          <p data-ko="자체 시제품 제작과 위탁 설계 고도화" data-en="In-house prototyping and outsourced design refinement">자체 시제품 제작 및 설계 고도화</p>
+        </div>
+        <div>
+          <div class="when">2026 H2</div>
+          <h3 data-ko="In-vitro 검증" data-en="In-vitro validation">In-vitro 검증</h3>
+          <p data-ko="요도 모형을 이용한 삽입력 성능 검증" data-en="Insertion-force validation in urethral models">요도 모형 기반 삽입력 검증</p>
+        </div>
+        <div>
+          <div class="when">2027–28</div>
+          <h3 data-ko="인허가 준비" data-en="Regulatory preparation">인허가 준비</h3>
+          <p data-ko="사전 품목분류 상담과 비임상 성능평가 자료 확보" data-en="Pre-submission classification consultation and non-clinical performance data">사전 품목분류 상담 · 비임상 성능평가</p>
+        </div>
+        <div>
+          <div class="when">2029~</div>
+          <h3 data-ko="제품화" data-en="Commercialisation">제품화</h3>
+          <p data-ko="허가 취득 후 국내 진입, 이후 UAS로 확장" data-en="Domestic entry after approval, then extension to UAS">허가 후 국내 진입 · UAS 확장</p>
+        </div>
+      </div>
+      <p class="note" data-ko="위 일정은 계획이며, 등급 분류와 심사 경로는 식약처 사전 품목분류 상담을 통해 확정될 예정입니다." data-en="The timeline above is a plan. Device classification and the review pathway will be confirmed through a pre-submission classification consultation with the MFDS.">위 일정은 계획입니다.</p>
+   </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 data-ko="연락 주세요." data-en="Let us talk.">연락 주세요.</h2>
+    <p data-ko="협업, 투자, 공동연구, 임상 검증 문의를 환영합니다. 현장에서 겪는 삽입 문제에 대한 의견도 언제든 듣고 싶습니다." data-en="We welcome enquiries about partnership, investment, joint research, and clinical validation — and we always want to hear about the insertion problems you see in practice.">협업, 투자, 공동연구, 임상 검증 문의를 환영합니다.</p>
+    <a class="mail" href="mailto:contact@eversiomedical.com">contact@eversiomedical.com</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap fw">
+    <div>
+      <div style="color:#c3d0de; font-weight:600; letter-spacing:-.02em; margin-bottom:6px">Eversio Medical</div>
+      <div>&copy; 2026 Eversio Medical. All rights reserved.</div>
+    </div>
+    <p class="disclaimer" data-ko="본 웹사이트에 소개된 기술과 제품은 개발 단계에 있습니다. 어떠한 국가에서도 의료기기로 승인·허가되지 않았으며, 판매되고 있지 않습니다. 본 사이트의 내용은 의학적 조언이 아니며 특정 시술이나 치료를 권유하지 않습니다. 인용된 통계는 출처에 표기된 공개 자료를 따릅니다." data-en="The technology and products described on this site are under development. They have not been approved or cleared as medical devices in any jurisdiction and are not available for sale. Nothing here constitutes medical advice or a recommendation for any procedure or treatment. Cited statistics follow the public sources noted alongside them.">본 웹사이트에 소개된 기술과 제품은 개발 단계에 있습니다.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var META = {
+    ko:{
+      title:"Eversio Medical — 무마찰 전개형 요도 카테터",
+      desc:"Eversio Medical은 관(管)으로 배뇨·신경계 문제를 푸는 회사입니다. 밀어 넣지 않고 안에서 밖으로 자라나는 eversion 구조로 요도 손상과 감염의 원인을 해결합니다.",
+      og:"밀어 넣지 않습니다. 안에서 밖으로 자라납니다."
+    },
+    en:{
+      title:"Eversio Medical — Friction-free everting urinary catheter",
+      desc:"Eversio Medical solves voiding and neurological problems with tubes. Our eversion structure grows from the inside out instead of being pushed, addressing the root cause of urethral damage and infection.",
+      og:"We do not push it in. It grows, from the inside out."
+    }
+  };
+  var btnKo = document.getElementById('btnKo');
+  var btnEn = document.getElementById('btnEn');
+
+  function setLang(l){
+    if(l !== 'ko' && l !== 'en') l = 'ko';
+    document.documentElement.lang = l;
+    var nodes = document.querySelectorAll('[data-ko]');
+    for(var i=0;i<nodes.length;i++){
+      var v = nodes[i].getAttribute('data-'+l);
+      if(v !== null) nodes[i].innerHTML = v;
+    }
+    document.title = META[l].title;
+    document.getElementById('metaDesc').setAttribute('content', META[l].desc);
+    document.getElementById('ogTitle').setAttribute('content', META[l].title);
+    document.getElementById('ogDesc').setAttribute('content', META[l].og);
+    btnKo.setAttribute('aria-pressed', String(l === 'ko'));
+    btnEn.setAttribute('aria-pressed', String(l === 'en'));
+    try{ localStorage.setItem('em-lang', l); }catch(e){}
+  }
+
+  var saved = null;
+  try{ saved = localStorage.getItem('em-lang'); }catch(e){}
+  if(!saved){
+    saved = (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+  }
+  setLang(saved);
+
+  btnKo.addEventListener('click', function(){ setLang('ko'); });
+  btnEn.addEventListener('click', function(){ setLang('en'); });
+
+  var burger = document.getElementById('burger');
+  var links  = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      links.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body>
+</html>
