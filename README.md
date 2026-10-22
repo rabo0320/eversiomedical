@@ -4,7 +4,8 @@
 
 ```
 index.html     전체 페이지 (HTML·CSS·JS·SVG 전부 이 파일 하나에 들어 있음)
-favicon.svg    브라우저 탭 아이콘
+favicon.svg    브라우저 탭 아이콘 (로고 배지 — 남색 사각형 + 흰 심볼)
+assets/        로고 비트맵: og-logo.png(링크 미리보기용 가로형), icon-192/512.png(홈 화면 아이콘)
 CNAME          GitHub Pages 커스텀 도메인 설정 (www.eversiomedical.com)
 .nojekyll      GitHub Pages의 Jekyll 처리 비활성화
 ```
@@ -62,6 +63,10 @@ git push -u origin main
 DNS 반영에 보통 10분~수 시간 걸립니다. 반영된 뒤 Settings → Pages 에서 **Enforce HTTPS** 를 체크하세요 (인증서 발급에 몇 분 더 걸립니다).
 
 ---
+
+## 로고
+
+원본은 `Downloads/Eversio_logo_final` 의 최종본(2026-09-22)입니다. 심볼(E자 곡선 + 붉은 점)은 SVG 패스를 헤더·푸터에 인라인으로 넣었고(`class="logo-sym"`, mask id 는 헤더 `biteH` / 푸터 `biteF` 로 다르게), 워드마크 "Eversio / Medical"은 웹폰트 텍스트로 재현했습니다. 색: 남색 `#0B2545`, 붉은 점 `#D44A60`, Medical 청록 `#2A8C8C`.
 
 ## 내용 수정하기
 

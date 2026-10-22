@@ -6,11 +6,17 @@
 <title>Eversio Medical — 무마찰 전개형 요도 카테터</title>
 <meta name="description" id="metaDesc" content="Eversio Medical은 관(管)으로 배뇨·신경계 문제를 푸는 회사입니다. 밀어 넣지 않고 안에서 밖으로 자라나는 eversion 구조로 요도 손상과 감염의 원인을 해결합니다.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Eversio Medical">
 <meta property="og:title" id="ogTitle" content="Eversio Medical — 무마찰 전개형 요도 카테터">
 <meta property="og:description" id="ogDesc" content="밀어 넣지 않습니다. 안에서 밖으로 자라납니다.">
 <meta property="og:url" content="https://www.eversiomedical.com/">
+<meta property="og:image" content="https://www.eversiomedical.com/assets/og-logo.png">
+<meta property="og:image:width" content="1722">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B1C33">
 <link rel="canonical" href="https://www.eversiomedical.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,10 +68,11 @@
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex; align-items:center; gap:26px; height:66px}
-  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:700; letter-spacing:-.02em; font-size:1.02rem; color:var(--navy)}
-  .brand svg{width:26px; height:26px; color:var(--accent); flex:none}
-  .brand span{white-space:nowrap}
-  .brand i{font-style:normal; font-weight:500; color:var(--muted)}
+  .brand{display:flex; align-items:center; gap:11px; text-decoration:none; color:#0B2545}
+  .brand .logo-sym{height:32px; width:auto; flex:none; display:block}
+  .wordmark{display:flex; flex-direction:column; line-height:1; white-space:nowrap; letter-spacing:-.025em}
+  .wordmark b{font-weight:700; font-size:1.08rem; color:#0B2545}
+  .wordmark i{font-style:normal; font-weight:500; font-size:.78rem; color:#2A8C8C; margin-top:3px; letter-spacing:-.01em}
   .nav-links{display:flex; gap:24px; margin-left:auto}
   .nav-links a{
     text-decoration:none; font-size:.91rem; font-weight:500; color:var(--muted);
@@ -229,6 +236,8 @@
   footer{background:#061223; color:#7f90a5; padding:44px 0; font-size:.85rem; line-height:1.7}
   footer .fw{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap}
   .disclaimer{max-width:66ch; color:#63768c; font-size:.79rem}
+  .fbrand{display:flex; align-items:flex-start; gap:14px}
+  .fbrand .logo-sym{height:40px; width:auto; flex:none; margin-top:2px}
 
   @media (max-width:980px){
     .grid-4,.assets{grid-template-columns:repeat(2,1fr)}
@@ -248,7 +257,7 @@
     .burger{display:flex}
     .lang{order:3}
     .nav{gap:14px}
-    .brand{font-size:.95rem}
+    .brand .logo-sym{height:28px}
   }
   @media (max-width:560px){
     .grid-4,.assets{grid-template-columns:1fr}
@@ -266,12 +275,9 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top">
-      <svg viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M6 7 H18 A9 9 0 0 1 18 25 H6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10.5 13 H17 A3 3 0 0 1 17 19 H10.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
-      </svg>
-      <span>Eversio <i>Medical</i></span>
+    <a class="brand" href="#top" aria-label="Eversio Medical">
+      <svg class="logo-sym" viewBox="0 0 401 376" aria-hidden="true"><defs><mask id="biteH"><rect width="401" height="376" fill="white"/><circle cx="324" cy="313" r="31" fill="black"/></mask></defs><path d="M 314.5 47.5 H 108 A 47.5 47.5 0 0 0 108 142.5 H 232.5 A 37.25 37.25 0 0 1 232.5 217 H 109 A 47.75 47.75 0 0 0 109 312.5 H 326" fill="none" stroke="#0B2545" stroke-width="41" stroke-linecap="round" stroke-linejoin="round" mask="url(#biteH)"/><circle cx="324" cy="313" r="25" fill="#D44A60"/></svg>
+      <span class="wordmark"><b>Eversio</b><i>Medical</i></span>
     </a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -651,9 +657,12 @@
 
 <footer>
   <div class="wrap fw">
-    <div>
-      <div style="color:#c3d0de; font-weight:600; letter-spacing:-.02em; margin-bottom:6px" data-ko="(주)에버시오메디칼" data-en="Eversio Medical Co., Ltd.">(주)에버시오메디칼</div>
-      <div>&copy; 2026 Eversio Medical Co., Ltd. All rights reserved.</div>
+    <div class="fbrand">
+      <svg class="logo-sym" viewBox="0 0 401 376" aria-hidden="true"><defs><mask id="biteF"><rect width="401" height="376" fill="white"/><circle cx="324" cy="313" r="31" fill="black"/></mask></defs><path d="M 314.5 47.5 H 108 A 47.5 47.5 0 0 0 108 142.5 H 232.5 A 37.25 37.25 0 0 1 232.5 217 H 109 A 47.75 47.75 0 0 0 109 312.5 H 326" fill="none" stroke="#FFFFFF" stroke-width="41" stroke-linecap="round" stroke-linejoin="round" mask="url(#biteF)"/><circle cx="324" cy="313" r="25" fill="#D44A60"/></svg>
+      <div>
+        <div style="color:#e4ecf4; font-weight:600; letter-spacing:-.02em; margin-bottom:4px" data-ko="(주)에버시오메디칼" data-en="Eversio Medical Co., Ltd.">(주)에버시오메디칼</div>
+        <div>&copy; 2026 Eversio Medical Co., Ltd. All rights reserved.</div>
+      </div>
     </div>
     <p class="disclaimer" data-ko="본 웹사이트에 소개된 기술과 제품은 개발 단계에 있습니다. 어떠한 국가에서도 의료기기로 승인·허가되지 않았으며, 판매되고 있지 않습니다. 본 사이트의 내용은 의학적 조언이 아니며 특정 시술이나 치료를 권유하지 않습니다. 인용된 통계는 출처에 표기된 공개 자료를 따릅니다." data-en="The technology and products described on this site are under development. They have not been approved or cleared as medical devices in any jurisdiction and are not available for sale. Nothing here constitutes medical advice or a recommendation for any procedure or treatment. Cited statistics follow the public sources noted alongside them.">본 웹사이트에 소개된 기술과 제품은 개발 단계에 있습니다.</p>
   </div>
