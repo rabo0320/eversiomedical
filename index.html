@@ -208,39 +208,15 @@
   .asset .v{font-size:1.02rem; font-weight:600; color:#fff; letter-spacing:-.015em; margin-bottom:6px; line-height:1.4}
   .asset .d{font-size:.85rem; color:#9db0c4; line-height:1.55}
 
-  /* ---------- team ---------- */
-  .team{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
-  .person{border:1px solid var(--line); border-radius:var(--r); padding:28px 26px; background:#fff}
-  .person .av{
-    width:48px; height:48px; border-radius:50%; background:var(--accent-bg); color:#0a6f72;
-    display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.05rem; margin-bottom:18px; letter-spacing:-.02em;
-  }
-  .person h3{font-size:1.15rem; margin-bottom:4px}
-  .person .role{font-size:.87rem; font-weight:600; color:var(--accent); margin-bottom:10px}
-  .person p{font-size:.9rem; color:var(--muted); line-height:1.6}
 
-  /* ---------- timeline ---------- */
-  .tl{display:grid; grid-template-columns:repeat(5,1fr); gap:0}
-  .tl > div{padding:26px 22px 0 0; border-top:2px solid var(--line); position:relative}
-  .tl > div::before{content:""; position:absolute; top:-6px; left:0; width:10px; height:10px; border-radius:50%; background:#fff; border:2px solid var(--line)}
-  .tl > div.now{border-top-color:var(--accent)}
-  .tl > div.now::before{background:var(--accent); border-color:var(--accent)}
-  .tl > div.done{border-top-color:var(--navy)}
-  .tl > div.done::before{background:var(--navy); border-color:var(--navy)}
-  .tl > div.done .when{color:var(--navy)}
-  .tl .when{font-size:.8rem; font-weight:700; letter-spacing:.08em; color:var(--accent); margin-bottom:8px}
-  .tl h3{font-size:.99rem; margin-bottom:7px}
-  .tl p{font-size:.88rem; color:var(--muted); line-height:1.58; padding-right:14px}
 
   /* ---------- company facts ---------- */
   .co{display:grid; grid-template-columns:1.12fr .88fr; gap:60px; align-items:start}
-  .status{margin-top:64px; padding-top:52px; border-top:1px solid var(--line)}
   .co p + p{margin-top:18px}
   .facts{border-top:1px solid var(--line); margin:0}
   .facts div{display:flex; justify-content:space-between; gap:20px; padding:15px 0; border-bottom:1px solid var(--line); font-size:.93rem}
   .facts dt{color:var(--muted)}
   .facts dd{margin:0; font-weight:500; text-align:right}
-  .tbd{display:inline-block; border:1px dashed #c3cedb; border-radius:6px; padding:1px 9px; font-size:.82rem; font-weight:500; color:#8a99ab; background:#f8fafc}
 
   /* ---------- contact ---------- */
   .contact{background:var(--navy); color:#fff; padding:88px 0}
@@ -256,10 +232,7 @@
 
   @media (max-width:980px){
     .grid-4,.assets{grid-template-columns:repeat(2,1fr)}
-    .tl{grid-template-columns:repeat(3,1fr); gap:0 22px}
     .prod{grid-template-columns:1fr}
-    .tl > div{padding-bottom:26px}
-    .team{grid-template-columns:1fr}
   }
   @media (max-width:900px){
     .hero .wrap{grid-template-columns:1fr; gap:38px; padding-top:58px; padding-bottom:62px}
@@ -278,7 +251,7 @@
     .brand{font-size:.95rem}
   }
   @media (max-width:560px){
-    .grid-4,.assets,.tl{grid-template-columns:1fr}
+    .grid-4,.assets{grid-template-columns:1fr}
     .kv > div{grid-template-columns:1fr; gap:4px}
     .anim svg{min-width:600px}
   }
@@ -308,7 +281,6 @@
       <a href="#approach" data-ko="접근" data-en="Approach">접근</a>
       <a href="#technology" data-ko="기술" data-en="Technology">기술</a>
       <a href="#products" data-ko="제품" data-en="Products">제품</a>
-      <a href="#team" data-ko="팀" data-en="Team">팀</a>
       <a href="#company" data-ko="회사" data-en="Company">회사</a>
       <a href="#contact" data-ko="문의" data-en="Contact">문의</a>
     </nav>
@@ -638,36 +610,6 @@
   </div>
 </section>
 
-<!-- ================= TEAM ================= -->
-<section class="sec" id="team">
-  <div class="wrap">
-    <div class="head">
-      <div class="eyebrow" data-ko="팀" data-en="Team">팀</div>
-      <h2 data-ko="로보틱스 연구와 비뇨의학 임상이 함께 만듭니다." data-en="Built by robotics research and urology practice together.">로보틱스 연구와 비뇨의학 임상이 함께 만듭니다.</h2>
-    </div>
-    <div class="team">
-      <div class="person">
-        <div class="av" data-ko="임" data-en="JL">임</div>
-        <h3 data-ko="임정현" data-en="Jeonghyeon Lim">임정현</h3>
-        <div class="role" data-ko="CEO · DGIST 대학원 연구원" data-en="CEO · Graduate researcher, DGIST">CEO · DGIST 대학원 연구원</div>
-        <p data-ko="Eversion 로봇 미세제작 및 전극 개발을 담당해 왔습니다." data-en="Works on microfabrication of eversion robots and electrode development.">Eversion 로봇 미세제작 · 전극 개발</p>
-      </div>
-      <div class="person">
-        <div class="av" data-ko="송" data-en="SS">송</div>
-        <h3 data-ko="송석호" data-en="Sukho Song">송석호</h3>
-        <div class="role" data-ko="CTO · DGIST 교수" data-en="CTO · Professor, DGIST">CTO · DGIST 교수</div>
-        <p data-ko="소프트 로보틱스와 의료기기 연구를 총괄합니다." data-en="Leads the soft robotics and medical device research programme.">소프트로보틱스 · 의료기기 연구 총괄</p>
-      </div>
-      <div class="person">
-        <div class="av" data-ko="이" data-en="JL">이</div>
-        <h3 data-ko="이종수" data-en="Jongsoo Lee">이종수</h3>
-        <div class="role" data-ko="Medical Advisor · 세브란스 비뇨의학과 교수" data-en="Medical Advisor · Professor of Urology, Severance Hospital">Medical Advisor · 세브란스 비뇨의학과 교수</div>
-        <p data-ko="의료기기 검증과 임상시험을 총괄합니다." data-en="Oversees device validation and clinical study design.">의료기기 검증 및 임상시험 총괄</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= COMPANY / STATUS ================= -->
 <section class="sec sec-alt" id="company">
   <div class="wrap">
@@ -675,7 +617,7 @@
     <div>
       <div class="eyebrow" data-ko="회사" data-en="Company">회사</div>
       <h2 style="margin-bottom:22px" data-ko="무마찰 전개가 표준이 되는 카테터 시장을 만듭니다." data-en="Making friction-free deployment the standard in catheters.">무마찰 전개가 표준이 되는 카테터 시장을 만듭니다.</h2>
-      <p data-ko="Eversio Medical은 DGIST에서 출발한 초기 단계 의료기기 팀입니다. Eversion 구동에 관한 원천 연구를 임상에서 쓰일 수 있는 카테터로 옮기는 일을 합니다." data-en="Eversio Medical is an early-stage medical device team out of DGIST, translating foundational research on eversion actuation into catheters that can be used in the clinic.">Eversio Medical은 DGIST에서 출발한 초기 단계 의료기기 팀입니다.</p>
+      <p data-ko="(주)에버시오메디칼은 DGIST에서 출발한 초기 창업 의료기기 기업입니다. Eversion 구동에 관한 원천 연구를 임상에서 쓰일 수 있는 카테터로 옮기는 일을 합니다." data-en="Eversio Medical Co., Ltd. is an early-stage medical device company out of DGIST, translating foundational research on eversion actuation into catheters that can be used in the clinic.">(주)에버시오메디칼은 DGIST에서 출발한 초기 창업 의료기기 기업입니다.</p>
       <p data-ko="코팅과 소재로 증상을 완화하는 대신, 삽입 구조를 바꿔 원인을 제거하는 길을 택했습니다. 설계와 해석, 그리고 요도 모형을 이용한 in-vitro 검증으로 성능을 확인한 뒤 단계적으로 인허가와 제품화로 나아갑니다." data-en="Instead of easing symptoms with coatings and materials, we chose to remove the cause by changing the insertion structure. Performance is confirmed through design, analysis, and in-vitro validation in urethral models before moving step by step toward regulatory approval and commercialisation.">삽입 구조를 바꿔 원인을 제거하는 길을 택했습니다.</p>
       <p data-ko="2026년 9월 Working sample을 확보해 전개압 10 kPa를 실측했고, 같은 달 식약처로부터 2등급(비뇨기과용 범용 튜브·카테터) 동등성 관련 의견을 받았습니다. 코팅(약물)이 없는 구조이기 때문에, 임상시험 단계 없이 비임상 성능평가 자료로 품목허가를 받는 경로를 목표로 합니다." data-en="In September 2026 we completed a working sample and measured a 10 kPa deployment pressure, and in the same month received an opinion from the MFDS on Class II equivalence (general-purpose urological tubes and catheters). Because the structure carries no coating or drug, we are targeting a pathway to approval based on non-clinical performance data, without a clinical-trial stage.">2026년 9월 Working sample을 확보하고 식약처 2등급 동등성 관련 의견을 받았습니다.</p>
 
@@ -683,9 +625,8 @@
 
     <div>
       <dl class="facts">
-        <div><dt data-ko="회사명" data-en="Name">회사명</dt><dd>Eversio Medical</dd></div>
-        <div><dt data-ko="단계" data-en="Stage">단계</dt><dd data-ko="DGIST 예비창업 · Working sample 확보" data-en="DGIST pre-startup · working sample achieved">DGIST 예비창업 · Working sample 확보</dd></div>
-        <div><dt data-ko="법인 설립" data-en="Incorporation">법인 설립</dt><dd data-ko="2026년 11월 예정" data-en="Planned for November 2026">2026년 11월 예정</dd></div>
+        <div><dt data-ko="회사명" data-en="Name">회사명</dt><dd data-ko="(주)에버시오메디칼" data-en="Eversio Medical Co., Ltd.">(주)에버시오메디칼</dd></div>
+        <div><dt data-ko="단계" data-en="Stage">단계</dt><dd data-ko="초기창업" data-en="Early-stage startup">초기창업</dd></div>
         <div><dt data-ko="인허가" data-en="Regulatory">인허가</dt><dd data-ko="식약처 2등급 동등성 관련 의견 확보 (2026.9)" data-en="MFDS Class II equivalence opinion (Sep 2026)">식약처 2등급 동등성 관련 의견 확보 (2026.9)</dd></div>
         <div><dt data-ko="소재지" data-en="Location">소재지</dt><dd data-ko="대구 · DGIST" data-en="Daegu · DGIST">대구 · DGIST</dd></div>
         <div><dt data-ko="분야" data-en="Field">분야</dt><dd data-ko="비뇨기 의료기기" data-en="Urological medical devices">비뇨기 의료기기</dd></div>
@@ -694,37 +635,6 @@
     </div>
    </div>
 
-   <div class="status">
-      <div class="eyebrow" data-ko="개발 현황" data-en="Development status">개발 현황</div>
-      <div class="tl">
-        <div class="done">
-          <div class="when" data-ko="2026.9 · 완료" data-en="Sep 2026 · done">2026.9 · 완료</div>
-          <h3 data-ko="Working sample" data-en="Working sample">Working sample</h3>
-          <p data-ko="자체 시제품 제작 · 전개압 10 kPa 실측 · 식약처 2등급 동등성 관련 의견 확보" data-en="In-house prototype · 10 kPa deployment pressure measured · MFDS Class II equivalence opinion obtained">자체 시제품 · 전개압 10 kPa 실측 · 식약처 2등급 의견 확보</p>
-        </div>
-        <div class="now">
-          <div class="when" data-ko="2026 Q4 · 진행 중" data-en="Q4 2026 · in progress">2026 Q4 · 진행 중</div>
-          <h3 data-ko="In-vitro 검증 · 법인 설립" data-en="In-vitro validation · incorporation">In-vitro 검증 · 법인 설립</h3>
-          <p data-ko="세브란스 비뇨의학과팀과 요도 모형 삽입력·성공률 검증 · KBIOHealth 위탁 설계 고도화(설계·해석·SOP) · 법인 설립 · 인증 사전상담 · 동등품목 비교표" data-en="Insertion-force and success-rate validation in urethral models with the Severance urology team · outsourced design refinement at KBIOHealth (design, analysis, SOP) · incorporation · pre-certification consultation · predicate comparison">요도 모형 검증 · KBIOHealth 설계 고도화 · 법인 설립 · 인증 사전상담</p>
-        </div>
-        <div>
-          <div class="when">2027</div>
-          <h3 data-ko="시험 · 인증 준비" data-en="Testing and certification prep">시험 · 인증 준비</h3>
-          <p data-ko="금형 제작 · OEM 후보 선정 · 식약처 사전검토로 심사 경로 확정 · 생체적합성(ISO 10993)·성능시험 · 혁신의료기기 지정 신청 · 멸균 밸리데이션 · 기술문서" data-en="Tooling · OEM selection · MFDS pre-review to fix the pathway · biocompatibility (ISO 10993) and performance testing · innovative medical device designation · sterilisation validation · technical file">금형 · OEM 선정 · 식약처 사전검토 · ISO 10993·성능시험 · 기술문서</p>
-        </div>
-        <div>
-          <div class="when">2028</div>
-          <h3 data-ko="인증 · 국내 진입" data-en="Certification and domestic entry">인증 · 국내 진입</h3>
-          <p data-ko="2등급 인증 신청·완료 · 제조업 허가 · OEM 양산 착수 · 협력 병원 처방 개시 후 다기관 확대" data-en="Class II certification filed and completed · manufacturing licence · OEM production · first prescriptions at partner hospitals, then multi-centre expansion">2등급 인증 · 제조업 허가 · OEM 양산 · 협력 병원 처방 개시</p>
-        </div>
-        <div>
-          <div class="when">2029~</div>
-          <h3 data-ko="확장" data-en="Expansion">확장</h3>
-          <p data-ko="급여 등록 추진 · 유치형(Foley) 개발 · 해외 인증(CE·FDA) 준비 · Eversio-UAS 확장" data-en="Reimbursement registration · indwelling (Foley) development · CE and FDA preparation · extension to Eversio-UAS">급여 등록 · Foley 개발 · CE·FDA 준비 · UAS 확장</p>
-        </div>
-      </div>
-      <p class="note" data-ko="위 일정은 사업계획상 목표이며 변동될 수 있습니다. 2026년 9월 확보한 식약처 의견은 '비뇨기과용 범용 튜브·카테터(A57060.01) · 2등급'에 해당할 것으로 본다는 동등성 관련 의견으로, 확정 판정이 아닙니다. 심사 경로(비임상·임상 자료 필요 여부)는 식약처 사전검토를 통해 최종 확정됩니다." data-en="The timeline above reflects business-plan targets and may change. The MFDS opinion obtained in September 2026 indicates that the device is expected to fall under 'general-purpose urological tubes and catheters (A57060.01), Class II'; it is an equivalence-related opinion, not a final determination. The review pathway (whether non-clinical or clinical data are required) will be fixed through MFDS pre-review.">위 일정은 계획입니다.</p>
-   </div>
   </div>
 </section>
 
@@ -742,8 +652,8 @@
 <footer>
   <div class="wrap fw">
     <div>
-      <div style="color:#c3d0de; font-weight:600; letter-spacing:-.02em; margin-bottom:6px">Eversio Medical</div>
-      <div>&copy; 2026 Eversio Medical. All rights reserved.</div>
+      <div style="color:#c3d0de; font-weight:600; letter-spacing:-.02em; margin-bottom:6px" data-ko="(주)에버시오메디칼" data-en="Eversio Medical Co., Ltd.">(주)에버시오메디칼</div>
+      <div>&copy; 2026 Eversio Medical Co., Ltd. All rights reserved.</div>
     </div>
     <p class="disclaimer" data-ko="본 웹사이트에 소개된 기술과 제품은 개발 단계에 있습니다. 어떠한 국가에서도 의료기기로 승인·허가되지 않았으며, 판매되고 있지 않습니다. 본 사이트의 내용은 의학적 조언이 아니며 특정 시술이나 치료를 권유하지 않습니다. 인용된 통계는 출처에 표기된 공개 자료를 따릅니다." data-en="The technology and products described on this site are under development. They have not been approved or cleared as medical devices in any jurisdiction and are not available for sale. Nothing here constitutes medical advice or a recommendation for any procedure or treatment. Cited statistics follow the public sources noted alongside them.">본 웹사이트에 소개된 기술과 제품은 개발 단계에 있습니다.</p>
   </div>
