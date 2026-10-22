@@ -108,13 +108,8 @@
   .hero-facts li{font-size:.79rem; font-weight:500; color:#cfdce9; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.05); border-radius:999px; padding:5px 12px; line-height:1.4}
   .hero-facts li::before{content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--accent-lt); margin-right:8px; vertical-align:2px}
   .hero-viz{width:100%; height:auto; display:block}
-  .grow{stroke-dasharray:1000; animation:grow 6.5s linear infinite}
-  @keyframes grow{
-    0%{stroke-dashoffset:1000; opacity:1}
-    56%{stroke-dashoffset:0; opacity:1}
-    84%{stroke-dashoffset:0; opacity:1}
-    100%{stroke-dashoffset:0; opacity:0}
-  }
+  .hv-lbl{font:500 13px "Inter","Noto Sans KR",sans-serif; fill:rgba(255,255,255,.55)}
+  .hv-cap{font:600 12px "Inter","Noto Sans KR",sans-serif; fill:#dceaf5}
 
   /* ---------- sections ---------- */
   .sec{padding:92px 0}
@@ -266,7 +261,6 @@
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .grow{animation:none; stroke-dasharray:none}
     .card:hover{transform:none}
   }
 </style>
@@ -319,39 +313,26 @@
     </div>
 
     <div>
-      <svg class="hero-viz" viewBox="0 0 720 340" role="img" aria-labelledby="heroVizT">
-        <title id="heroVizT" data-ko="요도를 따라 팁에서부터 전개되는 eversion 카테터" data-en="An eversion catheter deploying from its tip along the urethra">요도를 따라 팁에서부터 전개되는 eversion 카테터</title>
+      <svg class="hero-viz" id="heroViz" viewBox="0 0 720 340" role="img" aria-labelledby="heroVizT">
+        <title id="heroVizT" data-ko="요도를 따라 eversion으로 전개되는 카테터의 단면 애니메이션 — 요도벽에 닿은 바깥 막은 정지하고 안쪽 막이 선단에서 뒤집히며 자라납니다" data-en="Cross-section animation of a catheter everting along the urethra — the outer membrane on the urethral wall stays still while the inner membrane everts at the tip and grows">요도를 따라 eversion으로 전개되는 카테터의 단면 애니메이션</title>
         <defs>
-          <linearGradient id="gCath" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#0d8f92"/><stop offset="100%" stop-color="#9ce8e6"/>
-          </linearGradient>
-          <filter id="fGlow" x="-60%" y="-60%" width="220%" height="220%">
-            <feGaussianBlur stdDeviation="7" result="b"/>
-            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
+          <filter id="hvGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
-        <!-- lumen -->
-        <path d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96"
-              fill="none" stroke="rgba(255,255,255,.09)" stroke-width="40" stroke-linecap="round"/>
-        <!-- bladder -->
+        <path d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="52" stroke-linecap="round"/>
         <ellipse cx="642" cy="92" rx="56" ry="50" fill="rgba(255,255,255,.055)" stroke="rgba(255,255,255,.16)" stroke-width="2"/>
-        <!-- deploying catheter -->
-        <path class="grow" pathLength="1000"
-              d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96"
-              fill="none" stroke="url(#gCath)" stroke-width="14" stroke-linecap="round"/>
-        <circle r="8" fill="#ccf7f5" filter="url(#fGlow)">
-          <animateMotion dur="6.5s" repeatCount="indefinite" calcMode="linear"
-                         keyPoints="0;1;1;1" keyTimes="0;0.56;0.84;1">
-            <mpath href="#heroPath" xlink:href="#heroPath"/>
-          </animateMotion>
-          <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
-                   values="1;1;1;0" keyTimes="0;0.56;0.84;1" calcMode="linear"/>
-        </circle>
-        <path id="heroPath" d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96" fill="none" stroke="none"/>
-        <text x="642" y="164" text-anchor="middle" fill="rgba(255,255,255,.5)" style="font:500 13px Inter,'Noto Sans KR',sans-serif"
-              data-ko="방광" data-en="Bladder">방광</text>
-        <text x="150" y="306" fill="rgba(255,255,255,.5)" style="font:500 13px Inter,'Noto Sans KR',sans-serif"
-              data-ko="요도" data-en="Urethra">요도</text>
+        <g id="hvBody">
+          <path id="hvSaline" fill="rgba(127,214,212,.28)"/>
+          <path id="hvCore" fill="rgba(11,28,51,.6)"/>
+          <g id="hvDrops" fill="#dff4ff"></g>
+          <path id="hvMem" fill="none" stroke="#9ce8e6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <g id="hvBands" fill="none" stroke-width="5" stroke-linecap="butt" stroke-linejoin="round"></g>
+          <ellipse id="hvFlare" rx="10" ry="10" fill="rgba(127,214,212,.25)" stroke="#9ce8e6" stroke-width="2.5" opacity="0"/>
+          <circle id="hvTip" r="5" fill="#ffffff" filter="url(#hvGlow)" opacity=".9"/>
+        </g>
+        <path id="hvPath" d="M34 268 C 150 268 176 214 268 196 S 404 176 470 140 S 566 74 660 96" fill="none" stroke="none"/>
+        <text class="hv-lbl" x="642" y="164" text-anchor="middle" data-ko="방광" data-en="Bladder">방광</text>
+        <text class="hv-lbl" x="150" y="306" data-ko="요도" data-en="Urethra">요도</text>
+        <text id="hvCap" class="hv-cap" x="34" y="40" opacity="0" data-ko="안쪽 막이 선단에서 뒤집혀 새 표면이 됩니다 — 벽에 닿은 면은 정지" data-en="The inner membrane everts at the tip into new surface — the wall-contact surface stays still">안쪽 막이 선단에서 뒤집혀 새 표면이 됩니다 — 벽에 닿은 면은 정지</text>
       </svg>
     </div>
   </div>
@@ -842,6 +823,89 @@
   });
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(es){ visible = es[0].isIntersecting; }, {threshold:0.05}).observe(fig);
+  }
+})();
+</script>
+<script>
+(function(){
+  var svg = document.getElementById('heroViz'); if(!svg) return;
+  var ns='http://www.w3.org/2000/svg';
+  var $=function(id){ return document.getElementById(id); };
+  var path=$('hvPath'), L=path.getTotalLength();
+  var saline=$('hvSaline'), core=$('hvCore'), mem=$('hvMem'), bandsG=$('hvBands'), dropsG=$('hvDrops'),
+      flare=$('hvFlare'), tip=$('hvTip'), cap=$('hvCap'), body=$('hvBody');
+  var RO=15, RI=5, R=(RO-RI)/2, RM=(RO+RI)/2, ARC=Math.PI*R, STEP=4, S0=22;
+  function mk(parent, tag, attrs){ var e=document.createElementNS(ns,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); parent.appendChild(e); return e; }
+  // precomputed frames (point + tangent + normal) along the path
+  var N=Math.ceil(L/STEP)+1, F=[];
+  for(var i=0;i<N;i++){ var sl=Math.min(L,i*STEP); var p=path.getPointAtLength(sl), q=path.getPointAtLength(Math.min(L,sl+1)), r=path.getPointAtLength(Math.max(0,sl-1));
+    var dx=q.x-r.x, dy=q.y-r.y, n=Math.hypot(dx,dy)||1; F.push({s:sl,x:p.x,y:p.y,tx:dx/n,ty:dy/n,nx:-dy/n,ny:dx/n}); }
+  function frameAt(sl){ sl=Math.max(0,Math.min(L,sl)); var i=Math.min(N-2,Math.floor(sl/STEP)), a=F[i], b=F[i+1], u=(sl-a.s)/((b.s-a.s)||1);
+    var tx=a.tx+(b.tx-a.tx)*u, ty=a.ty+(b.ty-a.ty)*u, n=Math.hypot(tx,ty)||1; tx/=n; ty/=n;
+    return {x:a.x+(b.x-a.x)*u, y:a.y+(b.y-a.y)*u, tx:tx, ty:ty, nx:-ty, ny:tx}; }
+  function off(fr, d){ return [fr.x+fr.nx*d, fr.y+fr.ny*d]; }
+  function arcPt(fr, side, phi){ var cx=fr.x+fr.nx*RM*side, cy=fr.y+fr.ny*RM*side;
+    return [cx + R*(Math.cos(phi)*fr.nx*side + Math.sin(phi)*fr.tx), cy + R*(Math.cos(phi)*fr.ny*side + Math.sin(phi)*fr.ty)]; }
+  // material coordinate on the folded membrane -> point (outer run, fold arc, inner run back)
+  function pt(smat, sf, side){
+    if(smat<=sf) return off(frameAt(smat), RO*side);
+    if(smat<=sf+ARC) return arcPt(frameAt(sf), side, (smat-sf)/R);
+    return off(frameAt(sf-(smat-sf-ARC)), RI*side);
+  }
+  function poly(pts){ var d=''; for(var i=0;i<pts.length;i++) d+=(i?'L':'M')+pts[i][0].toFixed(1)+','+pts[i][1].toFixed(1); return d; }
+  var BM=[]; for(var b=S0+110;b<L-40;b+=150) BM.push(b);
+  var bands=BM.map(function(sm,i){ var c=i%2?'#ffffff':'#D44A60'; return {s:sm, t:mk(bandsG,'path',{stroke:c}), b:mk(bandsG,'path',{stroke:c})}; });
+  var ND=4, drops=[]; for(var k=0;k<ND;k++) drops.push(mk(dropsG,'circle',{r:2,opacity:.7}));
+  function sideRun(sf, sg){
+    var pts=[], s; for(s=S0;s<sf;s+=STEP) pts.push(off(frameAt(s),RO*sg)); pts.push(off(frameAt(sf),RO*sg));
+    for(var phi=0;phi<=Math.PI+1e-6;phi+=Math.PI/8) pts.push(arcPt(frameAt(sf),sg,phi));
+    for(s=sf;s>S0;s-=STEP) pts.push(off(frameAt(s),RI*sg)); pts.push(off(frameAt(S0),RI*sg));
+    return pts;
+  }
+  function draw(p,k,clock){
+    var sf=S0+(L-R-S0)*p;
+    var top=sideRun(sf,1), bot=sideRun(sf,-1);
+    saline.setAttribute('d', poly(top)+'Z '+poly(bot)+'Z');
+    var cpts=[], s; for(s=S0;s<=sf;s+=STEP) cpts.push(off(frameAt(s),RI)); cpts.push(off(frameAt(sf),RI));
+    for(s=sf;s>=S0;s-=STEP) cpts.push(off(frameAt(s),-RI)); cpts.push(off(frameAt(S0),-RI));
+    core.setAttribute('d', poly(cpts)+'Z');
+    mem.setAttribute('d', poly(top)+' '+poly(bot));
+    bands.forEach(function(bd){
+      var n=8, w=12, pts=[], pb=[];
+      for(var i=0;i<=n;i++){ var sm=bd.s-w/2+w*i/n; pts.push(pt(sm,sf,1)); pb.push(pt(sm,sf,-1)); }
+      bd.t.setAttribute('d', poly(pts)); bd.b.setAttribute('d', poly(pb));
+      var inner = bd.s > sf+ARC, visible = !inner || (sf-(bd.s-sf-ARC)) > S0+4;
+      bd.t.setAttribute('opacity', visible?1:0); bd.b.setAttribute('opacity', visible?1:0);
+    });
+    var sp=60, offd=(clock*30)%sp;
+    drops.forEach(function(d,i){ var sl=S0+6+((i*sp+offd)%(ND*sp)); if(sl<sf-6){ var q=off(frameAt(sl), RM*(i%2?1:-1)); d.setAttribute('cx',q[0]); d.setAttribute('cy',q[1]); d.setAttribute('opacity',.7);} else d.setAttribute('opacity',0); });
+    var tf=frameAt(sf); tip.setAttribute('cx',tf.x+tf.tx*R); tip.setAttribute('cy',tf.y+tf.ty*R); tip.setAttribute('opacity', k>0?0.9*(1-k):0.9);
+    var e=frameAt(L); flare.setAttribute('cx',e.x+6); flare.setAttribute('cy',e.y); flare.setAttribute('rx',10+18*k); flare.setAttribute('ry',10+22*k); flare.setAttribute('opacity',k>0?0.95:0);
+    cap.setAttribute('opacity', Math.max(0,Math.min(1,(p-0.4)/0.15)));
+  }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ draw(0.72,0,0); return; }
+  // phases: wait · deploy · seat in bladder · hold · fade (seconds)
+  var T=[0.8,6.0,1.0,2.4,0.5], TOTAL=T.reduce(function(a,b){return a+b;},0);
+  function ease(p){ return p<.5 ? 2*p*p : 1-Math.pow(-2*p+2,2)/2; }
+  var visible=true, last=null, clock=0;
+  function frame(now){
+    if(last===null) last=now;
+    if(visible) clock+=Math.min(.05,(now-last)/1000);
+    last=now;
+    var t=clock%TOTAL, p, k=0, op=1;
+    if(t<T[0]) p=0;
+    else if(t<T[0]+T[1]) p=ease((t-T[0])/T[1]);
+    else if(t<T[0]+T[1]+T[2]){ p=1; k=ease((t-T[0]-T[1])/T[2]); }
+    else if(t<T[0]+T[1]+T[2]+T[3]){ p=1; k=1; }
+    else { p=1; k=1; op=1-(t-T[0]-T[1]-T[2]-T[3])/T[4]; }
+    body.setAttribute('opacity',op);
+    if(visible) draw(p,k,clock);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ visible=es[0].isIntersecting; }, {threshold:0.05}).observe(svg);
   }
 })();
 </script>
