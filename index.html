@@ -136,9 +136,6 @@
   .chain{display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin:26px 0 0; font-size:.9rem; font-weight:600; color:var(--navy)}
   .chain span{background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 16px}
   .chain i{font-style:normal; color:var(--muted-2)}
-  .quote{margin:34px 0 0; padding:26px 28px; border-left:3px solid var(--warn); background:#fff; border-radius:0 var(--r) var(--r) 0; border-top:1px solid var(--line); border-right:1px solid var(--line); border-bottom:1px solid var(--line)}
-  .quote p{font-size:1.04rem; line-height:1.7; color:var(--ink); max-width:70ch}
-  .quote footer{margin-top:12px; font-size:.84rem; color:var(--muted)}
 
   /* ---------- diagrams ---------- */
   .diagram{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:24px 18px 10px; margin:0 0 44px}
@@ -416,11 +413,6 @@
       <span data-ko="③ 2차 감염 — 상처로 세균 침투" data-en="3 · Secondary infection — bacteria enter through the wound">③ 2차 감염 — 상처로 세균 침투</span>
     </div>
 
-    <blockquote class="quote">
-      <p data-ko="“진료실에서 자가도뇨 환자와 가장 많이 나누는 이야기는 감염이 아니라 ‘넣을 때 너무 아프다’는 말입니다. 그 고통 때문에 횟수를 줄이고, 그래서 감염이 옵니다.”" data-en="“What I hear most often from self-catheterising patients in clinic is not about infection — it is ‘it hurts too much going in.’ Because of that pain they catheterise less often, and that is when infection comes.”">“진료실에서 자가도뇨 환자와 가장 많이 나누는 이야기는 감염이 아니라 ‘넣을 때 너무 아프다’는 말입니다.”</p>
-      <footer data-ko="이종수 교수 · 세브란스 비뇨의학과 · Medical Advisor" data-en="Prof. Jongsoo Lee · Urology, Severance Hospital · Medical Advisor">이종수 교수 · 세브란스 비뇨의학과 · Medical Advisor</footer>
-    </blockquote>
-
     <p class="note" data-ko="출처 — 등록 환자·지급액: 국민건강보험공단 공공데이터(자가도뇨 소모성재료 등록 2019년 7,480명 → 2024년 18,470명, 2025년 지급액 약 231억 원). 1,713만 개 = 지급액 ÷ 개당 환급 1,350원(1일 9,000원·6개 한도·실구입가 90%). 병원 처방 139.7만 건: Song JY et al., J Korean Med Sci 2025;40:e266 (HIRA 2010–2021). 통증 NRS 5.4: Cao L et al., BMC Anesthesiol 2024 (n=190). 통증 호소 36%: Turmel N et al., Prog Urol 2019. 요도 손상 27%·요로감염 63%: Walter M et al., Spinal Cord 2021 (척수손상 109명, 12개월). 협착 78%: Davis NF et al., World J Urol 2020 (37개월 추적)." data-en="Sources — Registered patients and spending: National Health Insurance Service open data (self-catheterisation consumables, 7,480 registered in 2019 → 18,470 in 2024; 2025 spending approx. KRW 23.1 billion). 17.1 million = spending ÷ KRW 1,350 reimbursed per catheter (KRW 9,000 daily cap, six per day, 90% of purchase price). Hospital orders, 1.397 million: Song JY et al., J Korean Med Sci 2025;40:e266 (HIRA 2010–2021). Pain NRS 5.4: Cao L et al., BMC Anesthesiol 2024 (n=190). Pain reported by 36%: Turmel N et al., Prog Urol 2019. Urethral injury 27% and UTI 63%: Walter M et al., Spinal Cord 2021 (109 SCI patients, 12 months). Stricture 78%: Davis NF et al., World J Urol 2020 (37-month follow-up).">출처 안내</p>
   </div>
 </section>
@@ -483,48 +475,57 @@
       </div>
       <div class="svg-wrap">
       <svg viewBox="0 0 760 300" role="img" aria-labelledby="evAnimT">
-        <title id="evAnimT" data-ko="단면 애니메이션 — 식염수 압력으로 선단만 전진하고 요도벽에 닿은 외벽은 정지해 있는 eversion 전개" data-en="Cross-section animation — eversion deployment in which saline pressure advances only the tip while the outer wall resting on the urethra stays still">단면 애니메이션 — eversion 전개</title>
+        <title id="evAnimT" data-ko="단면 애니메이션 — 식염수 압력으로 선단만 전진하고 요도벽에 닿은 외벽은 정지해 있는 eversion 전개. 중심의 내부관은 선단과 함께 전진하고 전개 뒤 배출 통로가 됩니다." data-en="Cross-section animation — eversion deployment in which saline pressure advances only the tip while the outer wall resting on the urethra stays still. The central inner tube advances with the tip and becomes the drainage path after deployment.">단면 애니메이션 — eversion 전개</title>
         <defs>
           <linearGradient id="gSaline" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#cfe3fa"/><stop offset="100%" stop-color="#a9cdf5"/></linearGradient>
-          <clipPath id="cArrows"><rect id="evClip" x="60" y="100" width="0" height="100"/></clipPath>
+          <clipPath id="cArrows"><rect id="evClip" x="60" y="80" width="0" height="140"/></clipPath>
+          <clipPath id="cBands"><rect x="60" y="80" width="700" height="140"/></clipPath>
+          <clipPath id="cDrain"><rect id="evDrainClip" x="66" y="138" width="0" height="24"/></clipPath>
         </defs>
         <!-- bladder -->
         <ellipse cx="686" cy="150" rx="66" ry="64" fill="#fdf1f1" stroke="#e3a8a5" stroke-width="3"/>
         <!-- urethral tissue -->
-        <rect x="40" y="92" width="582" height="26" fill="#fbe9e7"/>
-        <rect x="40" y="182" width="582" height="26" fill="#fbe9e7"/>
-        <line x1="40" y1="118" x2="622" y2="118" stroke="#e3a8a5" stroke-width="2"/>
-        <line x1="40" y1="182" x2="622" y2="182" stroke="#e3a8a5" stroke-width="2"/>
-        <rect x="616" y="119.5" width="14" height="61" fill="#fdf1f1"/>
-        <text class="d-wall" x="586" y="84" text-anchor="middle" data-ko="요도벽" data-en="Urethral wall">요도벽</text>
+        <rect x="40" y="86" width="582" height="26" fill="#fbe9e7"/>
+        <rect x="40" y="188" width="582" height="26" fill="#fbe9e7"/>
+        <line x1="40" y1="112" x2="622" y2="112" stroke="#e3a8a5" stroke-width="2"/>
+        <line x1="40" y1="188" x2="622" y2="188" stroke="#e3a8a5" stroke-width="2"/>
+        <rect x="616" y="113.5" width="14" height="73" fill="#fdf1f1"/>
+        <text class="d-wall" x="586" y="78" text-anchor="middle" data-ko="요도벽" data-en="Urethral wall">요도벽</text>
         <text class="d-label" x="686" y="250" text-anchor="middle" fill="#b4453c" data-ko="방광" data-en="Bladder">방광</text>
-        <!-- hub -->
-        <rect x="14" y="104" width="46" height="92" rx="7" fill="#11304f"/>
-        <path d="M0,150 H14" stroke="#2f7fd6" stroke-width="6" stroke-linecap="round"/>
-        <text class="d-sub" x="37" y="228" text-anchor="middle" data-ko="식염수 주입부" data-en="Saline inlet">식염수 주입부</text>
+        <!-- connector hub with side saline port -->
+        <rect x="14" y="98" width="46" height="104" rx="7" fill="#11304f"/>
+        <rect x="31" y="78" width="12" height="22" rx="3" fill="#2f7fd6"/>
+        <path d="M37,62 V76" stroke="#2f7fd6" stroke-width="5" stroke-linecap="round"/>
+        <text class="d-sub" x="6" y="56" text-anchor="start" data-ko="식염수 주입 (측면 포트)" data-en="Saline in (side port)">식염수 주입 (측면 포트)</text>
+        <text class="d-sub" x="37" y="228" text-anchor="middle" data-ko="연결부 · 밸브" data-en="Connector · valve">연결부 · 밸브</text>
         <!-- dynamic catheter -->
         <g id="evBody">
-          <rect id="evCore" x="60" y="140" width="80" height="20" fill="#eef4f9"/>
+          <rect id="evCore" x="60" y="134" width="80" height="32" fill="#eef4f9"/>
           <path id="evFluidT" fill="url(#gSaline)"/>
           <path id="evFluidB" fill="url(#gSaline)"/>
           <g id="evArrows" clip-path="url(#cArrows)" stroke="#2f7fd6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></g>
+          <!-- inner drainage tube: runs from the tip back through the hub and out of frame -->
+          <rect id="evInner" x="0" y="142" width="160" height="16" rx="3" fill="#e6f4f4" stroke="#0a6f72" stroke-width="2"/>
+          <path id="evInnerLink" fill="none" stroke="#0a6f72" stroke-width="2" stroke-linecap="round"/>
+          <g id="evDrain" clip-path="url(#cDrain)" stroke="#0a6f72" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0"></g>
           <path id="evWallT" fill="none" stroke="#0B1C33" stroke-width="3.5" stroke-linejoin="round"/>
           <path id="evWallB" fill="none" stroke="#0B1C33" stroke-width="3.5" stroke-linejoin="round"/>
-          <g id="evBands"></g>
-          <ellipse id="evFlare" cx="640" cy="150" rx="14" ry="12" fill="rgba(13,143,146,.28)" stroke="#0d8f92" stroke-width="2.5" opacity="0"/>
-          <text id="evLblWall" class="d-tag" x="200" y="80" text-anchor="middle" opacity="0" data-ko="요도벽에 닿은 외벽은 움직이지 않습니다 — 띠의 위치가 그대로" data-en="The outer wall on the urethra does not move — the bands stay put">요도벽에 닿은 외벽은 움직이지 않습니다 — 띠의 위치가 그대로</text>
-          <text id="evLblIn" class="d-sub" x="200" y="236" text-anchor="middle" opacity="0" data-ko="안쪽 막이 선단으로 공급되어 뒤집히며 새 표면이 됩니다" data-en="The inner membrane feeds the tip, everts and becomes new surface">안쪽 막이 선단으로 공급되어 뒤집히며 새 표면이 됩니다</text>
-          <text id="evLblFix" class="d-tag" x="750" y="38" text-anchor="end" opacity="0" data-ko="방광 도달 · 전개 후단부가 자리를 잡습니다" data-en="Arrival — the deployed end seats itself">방광 도달 · 전개 후단부가 자리를 잡습니다</text>
+          <g id="evBands" clip-path="url(#cBands)" fill="none" stroke-width="6" stroke-linecap="butt" stroke-linejoin="round"></g>
+          <ellipse id="evFlare" cx="640" cy="150" rx="16" ry="14" fill="rgba(13,143,146,.28)" stroke="#0d8f92" stroke-width="2.5" opacity="0"/>
+          <text id="evLblWall" class="d-tag" x="200" y="72" text-anchor="middle" opacity="0" data-ko="요도벽에 닿은 외벽은 움직이지 않습니다 — 띠의 위치가 그대로" data-en="The outer wall on the urethra does not move — the bands stay put">요도벽에 닿은 외벽은 움직이지 않습니다 — 띠의 위치가 그대로</text>
+          <text id="evLblIn" class="d-sub" x="200" y="246" text-anchor="middle" opacity="0" data-ko="안쪽 막이 선단으로 공급되어 뒤집히며 새 표면이 됩니다 · 내부관은 선단과 함께 전진" data-en="The inner membrane feeds the tip and everts into new surface · the inner tube advances with the tip">안쪽 막이 선단으로 공급되어 뒤집히며 새 표면이 됩니다 · 내부관은 선단과 함께 전진</text>
+          <text id="evLblFix" class="d-tag" x="750" y="38" text-anchor="end" opacity="0" data-ko="방광 도달 · 후단부가 자리를 잡고, 내부관으로 배출" data-en="Arrival — the end seats itself; drainage through the inner tube">방광 도달 · 후단부가 자리를 잡고, 내부관으로 배출</text>
+          <text id="evLblDrain" class="d-tag" x="8" y="282" text-anchor="start" opacity="0" data-ko="← 소변 배출 (유출부)" data-en="← Urine out (outlet)">← 소변 배출 (유출부)</text>
         </g>
       </svg>
       </div>
       <div class="legend">
         <span style="--sw:#0B1C33" data-ko="튜브 막 (한 장이 접혀 있음)" data-en="Tube membrane (one sheet, folded)">튜브 막 (한 장이 접혀 있음)</span>
         <span style="--sw:#b9d6f6" data-ko="생리식염수 (가압)" data-en="Saline (pressurised)">생리식염수 (가압)</span>
-        <span style="--sw:#eef4f9" data-ko="중심 채널 (배출)" data-en="Central channel (drainage)">중심 채널 (배출)</span>
+        <span style="--sw:#0a6f72" data-ko="내부관 (소변 배출)" data-en="Inner tube (drainage)">내부관 (소변 배출)</span>
         <span style="--sw:#fbe9e7" data-ko="요도벽" data-en="Urethral wall">요도벽</span>
       </div>
-      <figcaption data-ko="원리에서 직접 그린 단면 애니메이션입니다(실물 촬영이 아님). 색 띠는 튜브 막 위의 같은 지점을 표시합니다 — 안쪽에 있을 때는 선단으로 이동하지만, 뒤집혀 요도벽에 닿는 순간부터는 제자리에 멈춥니다. 요도벽과의 상대 이동이 0이라는 뜻입니다." data-en="A cross-section animation drawn from the mechanism (not footage). The coloured bands mark fixed points on the membrane — they travel toward the tip while inside, and stop dead the moment they evert onto the urethral wall. That is zero relative motion against the urethra.">원리에서 직접 그린 단면 애니메이션입니다.</figcaption>
+      <figcaption data-ko="원리에서 직접 그린 단면 애니메이션입니다(실물 촬영이 아님). 색 띠는 튜브 막 위의 같은 지점을 표시합니다 — 안쪽에 있을 때는 선단으로 이동하다가 접힘부를 돌아 나오고, 요도벽에 닿는 순간부터는 제자리에 멈춥니다. 요도벽과의 상대 이동이 0이라는 뜻입니다. 중심의 내부관은 선단에 연결되어 함께 전진하고, 전개가 끝나면 방광의 소변을 뒤로 내보내는 통로가 됩니다." data-en="A cross-section animation drawn from the mechanism (not footage). The coloured bands mark fixed points on the membrane — they travel toward the tip while inside, roll around the fold, and stop dead the moment they touch the urethral wall. That is zero relative motion against the urethra. The central inner tube is attached at the tip, advances with it, and once deployment is complete becomes the path that drains the bladder.">원리에서 직접 그린 단면 애니메이션입니다.</figcaption>
     </figure>
 
     <div class="grid-2 tech-row">
@@ -813,58 +814,90 @@
   var $ = function(id){ return document.getElementById(id); };
   var core=$('evCore'), fT=$('evFluidT'), fB=$('evFluidB'), wT=$('evWallT'), wB=$('evWallB'),
       bandsG=$('evBands'), arrowsG=$('evArrows'), clip=$('evClip'), flare=$('evFlare'),
-      lblWall=$('evLblWall'), lblIn=$('evLblIn'), lblFix=$('evLblFix'), body=$('evBody'),
-      phaseEl=$('animPhase'), btn=$('animBtn');
-  var X0=60, R=11, XMIN=150, XMAX=654, ARC=Math.PI*R;
+      inner=$('evInner'), innerLink=$('evInnerLink'), drainG=$('evDrain'), drainClip=$('evDrainClip'),
+      lblWall=$('evLblWall'), lblIn=$('evLblIn'), lblFix=$('evLblFix'), lblDrain=$('evLblDrain'),
+      body=$('evBody'), phaseEl=$('animPhase'), btn=$('animBtn');
+  // geometry: outer wall y=112/188, inverted membrane y=134/166, fold radius 11, inner tube y=142..158
+  var X0=60, YT=112, YI=134, R=11, YC=(YT+YI)/2, XMIN=150, XMAX=654, ARC=Math.PI*R, BW=10;
   var BANDS=[150,230,310,390,470,550], COLS=['#0d8f92','#b4453c'];
   var PH=[{ko:'① 식염수 주입',en:'1 · Saline injection'},
           {ko:'② Eversion 전개 — 외벽은 정지, 선단만 전진',en:'2 · Eversion — the wall stays still, only the tip advances'},
-          {ko:'③ 방광 도달 · 고정',en:'3 · Arrival in the bladder and fixation'}];
+          {ko:'③ 방광 도달 · 고정 · 내부관으로 배출',en:'3 · Arrival, fixation and drainage through the inner tube'}];
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function mk(c){ var r=document.createElementNS(ns,'rect'); r.setAttribute('width',8); r.setAttribute('height',9); r.setAttribute('rx',1.5); r.setAttribute('fill',c); bandsG.appendChild(r); return r; }
-  var bands = BANDS.map(function(X,i){ var c=COLS[i%2]; return {X:X, t:mk(c), b:mk(c), it:mk(c), ib:mk(c)}; });
+  function mkPath(parent, color){ var p=document.createElementNS(ns,'path'); if(color) p.setAttribute('stroke',color); parent.appendChild(p); return p; }
+  var bands = BANDS.map(function(X,i){ var c=COLS[i%2]; return {X:X, t:mkPath(bandsG,c), b:mkPath(bandsG,c)}; });
   var NA=9, arrows=[];
-  for(var k=0;k<NA;k++){ var p=document.createElementNS(ns,'path'); p.setAttribute('d','M0,0 h14 m0,0 l-5,-4 m5,4 l-5,4'); arrowsG.appendChild(p); arrows.push(p); }
+  for(var k=0;k<NA*2;k++){ var a=mkPath(arrowsG); a.setAttribute('d','M0,0 h14 m0,0 l-5,-4 m5,4 l-5,4'); arrows.push(a); }
+  var ND=8, drains=[];
+  for(var q=0;q<ND;q++){ var dpath=mkPath(drainG); dpath.setAttribute('d','M0,0 h-12 m0,0 l5,-3.5 m-5,3.5 l5,3.5'); drains.push(dpath); }
 
-  function put(r,x,y,show){ if(show){ r.setAttribute('x',x-4); r.setAttribute('y',y-4.5); r.setAttribute('opacity',1);} else r.setAttribute('opacity',0); }
+  // point on the folded membrane at material coordinate s (top side); bottom is mirrored about y=150
+  function pt(s, xo){
+    var L = xo - X0;
+    if(s <= L) return [X0+s, YT];
+    if(s <= L+ARC){ var th=(s-L)/R; return [xo + R*Math.sin(th), YC - R*Math.cos(th)]; }
+    return [xo - (s-L-ARC), YI];
+  }
+  function bandPath(sc, xo, mirror){
+    var d='', n=8;
+    for(var i=0;i<=n;i++){
+      var p=pt(sc-BW/2 + BW*i/n, xo);
+      var y = mirror ? 300-p[1] : p[1];
+      d += (i?' L':'M') + p[0].toFixed(2) + ',' + y.toFixed(2);
+    }
+    return d;
+  }
   function lang(){ return (document.documentElement.lang||'ko').indexOf('en')===0?'en':'ko'; }
   function setPhase(i){ if(setPhase.cur===i) return; setPhase.cur=i; phaseEl.setAttribute('data-ko',PH[i].ko); phaseEl.setAttribute('data-en',PH[i].en); phaseEl.textContent=PH[i][lang()]; }
 
   function draw(xf, k, t){
     var xo = xf - R;
     core.setAttribute('width', Math.max(0, xo-X0));
-    fT.setAttribute('d','M'+X0+',118 H'+xo+' A'+R+','+R+' 0 0 1 '+xo+',140 H'+X0+' Z');
-    fB.setAttribute('d','M'+X0+',182 H'+xo+' A'+R+','+R+' 0 0 0 '+xo+',160 H'+X0+' Z');
-    wT.setAttribute('d','M'+X0+',118 H'+xo+' A'+R+','+R+' 0 0 1 '+xo+',140 H'+(X0+4));
-    wB.setAttribute('d','M'+X0+',182 H'+xo+' A'+R+','+R+' 0 0 0 '+xo+',160 H'+(X0+4));
+    fT.setAttribute('d','M'+X0+','+YT+' H'+xo+' A'+R+','+R+' 0 0 1 '+xo+','+YI+' H'+X0+' Z');
+    fB.setAttribute('d','M'+X0+','+(300-YT)+' H'+xo+' A'+R+','+R+' 0 0 0 '+xo+','+(300-YI)+' H'+X0+' Z');
+    wT.setAttribute('d','M'+X0+','+YT+' H'+xo+' A'+R+','+R+' 0 0 1 '+xo+','+YI+' H'+(X0+4));
+    wB.setAttribute('d','M'+X0+','+(300-YT)+' H'+xo+' A'+R+','+R+' 0 0 0 '+xo+','+(300-YI)+' H'+(X0+4));
     clip.setAttribute('width', Math.max(0, xo-14-X0));
+    // inner tube attached just behind the tip, runs back out of frame on the left
+    var xi = xo + 4;
+    inner.setAttribute('width', xi);
+    innerLink.setAttribute('d','M'+(xi-1)+','+YI+' V142 M'+(xi-1)+','+(300-YI)+' V158');
+    // bands: material point that ends at outer position X sits at s = X - X0
     for(var i=0;i<bands.length;i++){
-      var bd=bands[i], X=bd.X;
-      if(X<=xo){ put(bd.t,X,118,true); put(bd.b,X,182,true); put(bd.it,0,0,false); put(bd.ib,0,0,false); }
-      else{
-        put(bd.t,0,0,false); put(bd.b,0,0,false);
-        var d=X-xo, xi = xo-(d-ARC);
-        var show = d>ARC && xi>=X0+6;
-        put(bd.it,xi,140,show); put(bd.ib,xi,160,show);
-      }
+      var bd=bands[i], sc=bd.X-X0;
+      bd.t.setAttribute('d', bandPath(sc, xo, false));
+      bd.b.setAttribute('d', bandPath(sc, xo, true));
     }
+    // saline arrows in both annuli, flowing toward the tip
     var span=70, off=(t*85)%span;
     for(var a=0;a<NA;a++){
       var ax = X0+10 + ((a*span+off)%(NA*span));
-      arrows[a].setAttribute('transform','translate('+ax+',129)');
+      arrows[a].setAttribute('transform','translate('+ax+','+YC+')');
+      arrows[a+NA].setAttribute('transform','translate('+ax+','+(300-YC)+')');
+    }
+    // drainage arrows in the inner tube after arrival, flowing backward
+    drainG.setAttribute('opacity', k);
+    lblDrain.setAttribute('opacity', k);
+    drainClip.setAttribute('width', Math.max(0, xi-70));
+    if(k>0){
+      var dsp=64, doff=(t*70)%dsp;
+      for(var j=0;j<ND;j++){
+        var dx = xi - 6 - ((j*dsp+doff)%(ND*dsp));
+        drains[j].setAttribute('transform','translate('+dx+',150)');
+      }
     }
     var lw = Math.max(0,Math.min(1,(xo-300)/90));
     lblWall.setAttribute('opacity', lw); lblIn.setAttribute('opacity', lw);
     var lx = (X0+xo)/2; lblWall.setAttribute('x', lx); lblIn.setAttribute('x', lx);
-    flare.setAttribute('cx', xf-6); flare.setAttribute('rx', 14+18*k); flare.setAttribute('ry', 12+40*k);
+    flare.setAttribute('cx', xf-6); flare.setAttribute('rx', 16+18*k); flare.setAttribute('ry', 14+42*k);
     flare.setAttribute('opacity', k>0?0.95:0);
     lblFix.setAttribute('opacity', k);
   }
 
   if(reduce){ draw(520,0,0); setPhase(1); btn.style.display='none'; return; }
 
-  var T=[0.9,4.6,0.9,1.7,0.45], TOTAL=T.reduce(function(a,b){return a+b;},0);
+  var T=[0.9,4.8,0.9,2.2,0.45], TOTAL=T.reduce(function(a,b){return a+b;},0);
   function ease(p){ return p<.5 ? 2*p*p : 1-Math.pow(-2*p+2,2)/2; }
   var running=true, visible=true, last=null, clock=0;
   function frame(now){
