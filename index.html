@@ -97,6 +97,9 @@
   .btn-p:hover{background:#a6e6e4}
   .btn-s{border-color:rgba(255,255,255,.3); color:#dbe6f2}
   .btn-s:hover{border-color:#fff; background:rgba(255,255,255,.07)}
+  .hero-facts{list-style:none; padding:0; margin:30px 0 0; display:flex; flex-wrap:wrap; gap:8px 10px}
+  .hero-facts li{font-size:.79rem; font-weight:500; color:#cfdce9; border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.05); border-radius:999px; padding:5px 12px; line-height:1.4}
+  .hero-facts li::before{content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--accent-lt); margin-right:8px; vertical-align:2px}
   .hero-viz{width:100%; height:auto; display:block}
   .grow{stroke-dasharray:1000; animation:grow 6.5s linear infinite}
   @keyframes grow{
@@ -130,6 +133,12 @@
   .stat b{display:block; font-size:clamp(1.75rem,3.2vw,2.3rem); font-weight:700; letter-spacing:-.03em; color:var(--navy); line-height:1.1; margin-bottom:12px}
   .stat p{font-size:.9rem; color:var(--muted); line-height:1.58}
   .stat.hot b{color:var(--warn)}
+  .chain{display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin:26px 0 0; font-size:.9rem; font-weight:600; color:var(--navy)}
+  .chain span{background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 16px}
+  .chain i{font-style:normal; color:var(--muted-2)}
+  .quote{margin:34px 0 0; padding:26px 28px; border-left:3px solid var(--warn); background:#fff; border-radius:0 var(--r) var(--r) 0; border-top:1px solid var(--line); border-right:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .quote p{font-size:1.04rem; line-height:1.7; color:var(--ink); max-width:70ch}
+  .quote footer{margin-top:12px; font-size:.84rem; color:var(--muted)}
 
   /* ---------- diagrams ---------- */
   .diagram{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:24px 18px 10px; margin:0 0 44px}
@@ -146,6 +155,24 @@
   .step .st{display:block; font-weight:700; font-size:.99rem; color:var(--navy); letter-spacing:-.015em; margin-bottom:6px}
   .step .sd{display:block; font-size:.87rem; color:var(--muted); line-height:1.55}
   .dcap{font-size:.87rem; color:var(--muted); line-height:1.62; text-align:center; max-width:80ch; margin:0 auto 46px}
+  /* animated principle */
+  .anim{padding:18px 18px 12px}
+  .anim .svg-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .anim-top{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:0 4px 10px}
+  .anim-phase{font-size:.95rem; font-weight:700; color:var(--navy); letter-spacing:-.015em; min-height:1.5em}
+  .anim-phase b{color:var(--accent)}
+  .anim-btn{font:inherit; font-size:.76rem; font-weight:600; letter-spacing:.03em; padding:5px 12px; border-radius:999px; border:1px solid var(--line); background:#fff; color:var(--muted); cursor:pointer}
+  .anim-btn:hover{color:var(--navy); border-color:#c9d7e5}
+  .anim .d-tag{font:600 12px "Inter","Noto Sans KR",sans-serif; fill:#0a6f72}
+  .anim .d-wall{font:500 12px "Inter","Noto Sans KR",sans-serif; fill:#9a5f5c}
+  .legend{display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:center; padding:10px 8px 2px; font-size:.8rem; color:var(--muted)}
+  .legend span::before{content:""; display:inline-block; width:14px; height:8px; border-radius:2px; margin-right:7px; vertical-align:1px; background:var(--sw)}
+  .tech-row{margin:0 0 46px; align-items:stretch}
+  .kv{margin:0; display:grid; gap:0}
+  .kv > div{display:grid; grid-template-columns:118px 1fr; gap:16px; padding:14px 0; border-top:1px solid var(--line); align-items:baseline}
+  .kv dt{font-size:1.35rem; font-weight:700; letter-spacing:-.03em; color:var(--navy); line-height:1.1}
+  .kv dd{margin:0; font-size:.9rem; color:var(--muted); line-height:1.58}
+  .formula{background:var(--bg-2); border:1px solid var(--line); border-radius:10px; padding:14px 18px; font-size:.92rem; color:var(--navy); font-weight:500; margin-top:16px; line-height:1.6}
 
   /* ---------- approach comparison ---------- */
   .vs{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:14px}
@@ -167,11 +194,12 @@
   .evidence p{font-size:.9rem; color:#3e5a5c; line-height:1.6}
 
   /* ---------- products ---------- */
-  .prod{display:grid; grid-template-columns:repeat(2,1fr); gap:22px}
+  .prod{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
   .prod > div{border:1px solid var(--line); border-radius:var(--r); padding:30px 28px; background:#fff}
   .prod .badge{display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:4px 10px; border-radius:999px; margin-bottom:16px}
   .prod .badge.lead-b{background:var(--accent-bg); color:#0a6f72}
   .prod .badge.next-b{background:#f0f3f7; color:var(--muted)}
+  .prod .badge + .badge{margin-left:6px}
   .prod h3{font-size:1.35rem; letter-spacing:-.03em; margin-bottom:8px}
   .prod .kicker{font-size:.95rem; color:var(--accent); font-weight:500; margin-bottom:14px}
   .prod p{font-size:.94rem; color:var(--muted); line-height:1.62}
@@ -195,11 +223,14 @@
   .person p{font-size:.9rem; color:var(--muted); line-height:1.6}
 
   /* ---------- timeline ---------- */
-  .tl{display:grid; grid-template-columns:repeat(4,1fr); gap:0}
+  .tl{display:grid; grid-template-columns:repeat(5,1fr); gap:0}
   .tl > div{padding:26px 22px 0 0; border-top:2px solid var(--line); position:relative}
   .tl > div::before{content:""; position:absolute; top:-6px; left:0; width:10px; height:10px; border-radius:50%; background:#fff; border:2px solid var(--line)}
   .tl > div.now{border-top-color:var(--accent)}
   .tl > div.now::before{background:var(--accent); border-color:var(--accent)}
+  .tl > div.done{border-top-color:var(--navy)}
+  .tl > div.done::before{background:var(--navy); border-color:var(--navy)}
+  .tl > div.done .when{color:var(--navy)}
   .tl .when{font-size:.8rem; font-weight:700; letter-spacing:.08em; color:var(--accent); margin-bottom:8px}
   .tl h3{font-size:.99rem; margin-bottom:7px}
   .tl p{font-size:.88rem; color:var(--muted); line-height:1.58; padding-right:14px}
@@ -228,14 +259,15 @@
 
   @media (max-width:980px){
     .grid-4,.assets{grid-template-columns:repeat(2,1fr)}
-    .tl{grid-template-columns:repeat(2,1fr); gap:0 22px}
+    .tl{grid-template-columns:repeat(3,1fr); gap:0 22px}
+    .prod{grid-template-columns:1fr}
     .tl > div{padding-bottom:26px}
     .team{grid-template-columns:1fr}
   }
   @media (max-width:900px){
     .hero .wrap{grid-template-columns:1fr; gap:38px; padding-top:58px; padding-bottom:62px}
     .co{grid-template-columns:1fr; gap:36px}
-    .grid-3,.grid-2,.vs,.prod,.steps{grid-template-columns:1fr}
+    .grid-3,.grid-2,.vs,.prod{grid-template-columns:1fr}
     .sec{padding:66px 0}
     .nav-links{
       display:none; position:absolute; top:66px; left:0; right:0; flex-direction:column; gap:0;
@@ -250,6 +282,8 @@
   }
   @media (max-width:560px){
     .grid-4,.assets,.tl{grid-template-columns:1fr}
+    .kv > div{grid-template-columns:1fr; gap:4px}
+    .anim svg{min-width:600px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -302,6 +336,11 @@
         <a class="btn btn-p" href="#technology" data-ko="기술 살펴보기" data-en="See the technology">기술 살펴보기</a>
         <a class="btn btn-s" href="#contact" data-ko="문의하기" data-en="Get in touch">문의하기</a>
       </div>
+      <ul class="hero-facts">
+        <li data-ko="Working sample 확보 · 2026.9" data-en="Working sample achieved · Sep 2026">Working sample 확보 · 2026.9</li>
+        <li data-ko="식약처 2등급 동등성 관련 의견 확보 · 2026.9" data-en="MFDS Class II equivalence opinion obtained · Sep 2026">식약처 2등급 동등성 관련 의견 확보 · 2026.9</li>
+        <li data-ko="Science Robotics (2023) 원천연구 · 특허 등록 1 · 출원 2" data-en="Science Robotics (2023) research · 1 patent granted · 2 pending">Science Robotics (2023) 원천연구 · 특허 등록 1 · 출원 2</li>
+      </ul>
     </div>
 
     <div>
@@ -348,30 +387,41 @@
   <div class="wrap">
     <div class="head">
       <div class="eyebrow" data-ko="문제" data-en="The problem">문제</div>
-      <h2 data-ko="지금 이 순간에도, 1초에 한 번 넘게 카테터가 요도 안으로 밀려 들어가고 있습니다." data-en="Right now, more than once a second, a catheter is being pushed into a urethra in Korea.">지금 이 순간에도, 1초에 한 번 넘게 카테터가 요도 안으로 밀려 들어가고 있습니다.</h2>
-      <p class="lead" data-ko="국내 급여 등록 자가도뇨 환자 약 2.6만 명, 1일 6개 한도를 적용하면 연간 약 5,700만 회입니다. 이 숫자들의 뿌리는 단 하나 — 수십 년째 그대로인 밀어 넣는 삽입 방식입니다." data-en="With roughly 26,000 reimbursement-registered self-catheterisation patients in Korea and a daily limit of six catheters, that is about 57 million insertions a year. All of it traces back to one thing: an insertion method that has not changed in decades — pushing.">국내 급여 등록 자가도뇨 환자 약 2.6만 명 기준, 연간 약 5,700만 회입니다.</p>
+      <h2 data-ko="지금 이 순간에도, 2초에 한 번 넘게 카테터가 요도 안으로 밀려 들어가고 있습니다." data-en="Right now, more than once every two seconds, a catheter is being pushed into a urethra in Korea.">지금 이 순간에도, 2초에 한 번 넘게 카테터가 요도 안으로 밀려 들어가고 있습니다.</h2>
+      <p class="lead" data-ko="국내 자가도뇨 급여 등록 환자는 1.85만 명(2024년 말)으로 5년 사이 2.5배 늘었고, 2025년 급여 지급액을 환산하면 연간 약 1,713만 개의 카테터가 요도로 들어갑니다. 병원 내 도뇨 처방도 연 140만 건입니다. 이 숫자들의 뿌리는 단 하나 — 수십 년째 그대로인 밀어 넣는 삽입 방식입니다." data-en="Reimbursement-registered self-catheterisation patients in Korea reached 18,500 at the end of 2024, 2.5 times more than five years earlier, and 2025 reimbursement spending translates into about 17.1 million catheters entering a urethra each year. Hospitals add another 1.4 million catheterisation orders a year. All of it traces back to one thing: an insertion method that has not changed in decades — pushing.">국내 급여 기준으로 연간 약 1,713만 개의 카테터가 요도로 들어갑니다.</p>
     </div>
 
     <div class="grid-4">
       <div class="stat">
-        <b data-ko="2.6만 명" data-en="26,000">2.6만 명</b>
-        <p data-ko="급여 등록 자가도뇨 환자. 국내 신경인성 방광 진료인원은 약 42만 명입니다." data-en="Reimbursement-registered self-catheterisation patients. About 420,000 people are treated for neurogenic bladder in Korea.">급여 등록 자가도뇨 환자.</p>
-      </div>
-      <div class="stat">
-        <b data-ko="1,500회+" data-en="1,500+">1,500회+</b>
-        <p data-ko="환자 1인당 연간 삽입 횟수. 하루 4~6회를 평생 반복합니다." data-en="Insertions per patient per year — four to six times a day, repeated for life.">환자 1인당 연간 삽입 횟수.</p>
+        <b data-ko="연 1,713만 개" data-en="17.1M / yr">연 1,713만 개</b>
+        <p data-ko="국내 자가도뇨 급여 카테터(2025년 지급액 환산). 환자 1인당 하루 4~6회, 연 1,500회 이상 삽입합니다." data-en="Reimbursed self-catheterisation catheters in Korea (from 2025 spending). Each patient inserts four to six times a day — more than 1,500 times a year.">국내 자가도뇨 급여 카테터.</p>
       </div>
       <div class="stat hot">
-        <b data-ko="38.8%" data-en="38.8%">38.8%</b>
-        <p data-ko="척수손상 자가도뇨 환자 중 1년 내 요로감염으로 치료받은 비율." data-en="Share of spinal-cord-injury self-catheterisation patients treated for a urinary tract infection within one year.">1년 내 요로감염 치료 비율.</p>
+        <b data-ko="NRS 5.4 / 10" data-en="NRS 5.4 / 10">NRS 5.4 / 10</b>
+        <p data-ko="표준 윤활제를 써도 삽입 통증은 중등도 이상입니다(남성 190명 무작위 시험). 자가도뇨 환자 36%가 통증을 호소합니다." data-en="Even with standard lubricant, insertion pain is moderate or worse (randomised trial, 190 men). 36% of self-catheterising patients report pain.">표준 윤활제 삽입 통증 — 중등도 이상.</p>
+      </div>
+      <div class="stat hot">
+        <b data-ko="27% → 63%" data-en="27% → 63%">27% → 63%</b>
+        <p data-ko="척수손상 자가도뇨 환자 109명의 1년 내 요도 손상 경험률과 요로감염률. 상처가 세균의 침투 입구가 됩니다." data-en="Urethral injury and urinary tract infection within one year among 109 spinal-cord-injury self-catheterisation patients. The wound becomes the entry point for bacteria.">1년 내 요도 손상 27% · 요로감염 63%.</p>
       </div>
       <div class="stat hot">
         <b data-ko="78%" data-en="78%">78%</b>
-        <p data-ko="외상성 삽입 손상 환자의 요도협착 진행률. 협착이 다음 삽입을 더 어렵게 만드는 악순환입니다." data-en="Progression to urethral stricture after traumatic insertion injury — and each stricture makes the next insertion harder.">외상성 삽입 손상 환자의 요도협착 진행률.</p>
+        <p data-ko="삽입 손상 후 요도협착 진행률(37개월 추적). 협착이 다음 삽입을 더 어렵게 만드는 악순환입니다." data-en="Progression to urethral stricture after insertion injury (37-month follow-up) — and each stricture makes the next insertion harder.">삽입 손상 후 요도협착 진행률.</p>
       </div>
     </div>
 
-    <p class="note" data-ko="출처 — 삽입 빈도: 급여 등록 후천성 신경인성 방광 환자 약 2.6만 명(병원신문, 2017) × 1일 6개 한도. 환자 수: 신경인성 방광 진료인원 약 42만 명(2016, 건강보험 진료통계). 요로감염: 척수손상 CIC 환자 1년 내 UTI 치료율 38.8%. 요도협착: 외상성 삽입 손상 장기추적 결과 78% 진행." data-en="Sources — Insertion frequency: approx. 26,000 reimbursement-registered patients with acquired neurogenic bladder (Korean Hospital News, 2017) × daily limit of six. Patient count: approx. 420,000 treated for neurogenic bladder (2016, National Health Insurance statistics). UTI: 38.8% of spinal-cord-injury CIC patients treated within one year. Stricture: 78% progression in long-term follow-up of traumatic insertion injury.">출처 안내</p>
+    <div class="chain" aria-label="Problem chain">
+      <span data-ko="① 고통 — 마찰·긁힘" data-en="1 · Pain — friction and scraping">① 고통 — 마찰·긁힘</span><i>→</i>
+      <span data-ko="② 상처 — 협착·거짓통로" data-en="2 · Injury — stricture and false passage">② 상처 — 협착·거짓통로</span><i>→</i>
+      <span data-ko="③ 2차 감염 — 상처로 세균 침투" data-en="3 · Secondary infection — bacteria enter through the wound">③ 2차 감염 — 상처로 세균 침투</span>
+    </div>
+
+    <blockquote class="quote">
+      <p data-ko="“진료실에서 자가도뇨 환자와 가장 많이 나누는 이야기는 감염이 아니라 ‘넣을 때 너무 아프다’는 말입니다. 그 고통 때문에 횟수를 줄이고, 그래서 감염이 옵니다.”" data-en="“What I hear most often from self-catheterising patients in clinic is not about infection — it is ‘it hurts too much going in.’ Because of that pain they catheterise less often, and that is when infection comes.”">“진료실에서 자가도뇨 환자와 가장 많이 나누는 이야기는 감염이 아니라 ‘넣을 때 너무 아프다’는 말입니다.”</p>
+      <footer data-ko="이종수 교수 · 세브란스 비뇨의학과 · Medical Advisor" data-en="Prof. Jongsoo Lee · Urology, Severance Hospital · Medical Advisor">이종수 교수 · 세브란스 비뇨의학과 · Medical Advisor</footer>
+    </blockquote>
+
+    <p class="note" data-ko="출처 — 등록 환자·지급액: 국민건강보험공단 공공데이터(자가도뇨 소모성재료 등록 2019년 7,480명 → 2024년 18,470명, 2025년 지급액 약 231억 원). 1,713만 개 = 지급액 ÷ 개당 환급 1,350원(1일 9,000원·6개 한도·실구입가 90%). 병원 처방 139.7만 건: Song JY et al., J Korean Med Sci 2025;40:e266 (HIRA 2010–2021). 통증 NRS 5.4: Cao L et al., BMC Anesthesiol 2024 (n=190). 통증 호소 36%: Turmel N et al., Prog Urol 2019. 요도 손상 27%·요로감염 63%: Walter M et al., Spinal Cord 2021 (척수손상 109명, 12개월). 협착 78%: Davis NF et al., World J Urol 2020 (37개월 추적)." data-en="Sources — Registered patients and spending: National Health Insurance Service open data (self-catheterisation consumables, 7,480 registered in 2019 → 18,470 in 2024; 2025 spending approx. KRW 23.1 billion). 17.1 million = spending ÷ KRW 1,350 reimbursed per catheter (KRW 9,000 daily cap, six per day, 90% of purchase price). Hospital orders, 1.397 million: Song JY et al., J Korean Med Sci 2025;40:e266 (HIRA 2010–2021). Pain NRS 5.4: Cao L et al., BMC Anesthesiol 2024 (n=190). Pain reported by 36%: Turmel N et al., Prog Urol 2019. Urethral injury 27% and UTI 63%: Walter M et al., Spinal Cord 2021 (109 SCI patients, 12 months). Stricture 78%: Davis NF et al., World J Urol 2020 (37-month follow-up).">출처 안내</p>
   </div>
 </section>
 
@@ -381,7 +431,7 @@
     <div class="head">
       <div class="eyebrow" data-ko="접근" data-en="Approach">접근</div>
       <h2 data-ko="코팅은 증상을 공격합니다. 원인은 삽입 구조에 있습니다." data-en="Coatings attack the symptom. The cause is the insertion mechanism.">코팅은 증상을 공격합니다. 원인은 삽입 구조에 있습니다.</h2>
-      <p class="lead" data-ko="밀어 넣는 삽입이 요도벽을 긁고, 그 마찰 손상이 협착과 거짓통로를 만들며, 손상 부위가 세균 침투 입구가 되어 감염(CAUTI)으로 이어집니다. 지난 수십 년간 업계의 개선은 대부분 코팅과 소재에 집중되어 왔습니다." data-en="Pushing scrapes the urethral wall. That friction damage produces strictures and false passages, and the damaged surface becomes an entry point for bacteria, leading to catheter-associated infection. For decades, industry improvement has concentrated on coatings and materials.">밀어 넣는 삽입이 요도벽을 긁고, 그 손상이 협착과 감염으로 이어집니다.</p>
+      <p class="lead" data-ko="밀어 넣는 삽입이 요도벽을 긁고, 그 마찰 손상이 협착과 거짓통로를 만들며, 손상 부위가 세균 침투 입구가 되어 감염(CAUTI)으로 이어집니다. 지난 수십 년간 업계의 개선은 대부분 코팅과 소재에 집중되어 왔고, 밀어 넣는 삽입 자체를 바꾼 제품은 아직 없습니다." data-en="Pushing scrapes the urethral wall. That friction damage produces strictures and false passages, and the damaged surface becomes an entry point for bacteria, leading to catheter-associated infection. For decades, industry improvement has concentrated on coatings and materials — no product has yet changed the pushed insertion itself.">밀어 넣는 삽입이 요도벽을 긁고, 그 손상이 협착과 감염으로 이어집니다.</p>
     </div>
 
     <div class="vs">
@@ -393,6 +443,7 @@
           <li data-ko="항균 코팅·노블메탈 합금으로 감염 저감 시도" data-en="Antimicrobial coatings and noble-metal alloys to reduce infection">항균 코팅·노블메탈 합금으로 감염 저감 시도</li>
           <li data-ko="100% 실리콘 등 소재 전환" data-en="Material substitution such as all-silicone constructions">100% 실리콘 등 소재 전환</li>
           <li data-ko="삽입 방식 자체는 그대로 — 여전히 밀어 넣습니다" data-en="The insertion method itself is unchanged — it is still pushed">삽입 방식 자체는 그대로 — 여전히 밀어 넣습니다</li>
+          <li data-ko="힘의 상한이 시술자 손에 달려 있음 — 숙련자 4.9 N, 의대생 10.1 N" data-en="The force cap is in the operator's hand — 4.9 N for experienced clinicians, 10.1 N for medical students">힘의 상한이 시술자 손에 달려 있음 — 숙련자 4.9 N, 의대생 10.1 N</li>
         </ul>
       </div>
       <div class="b">
@@ -403,13 +454,14 @@
           <li data-ko="요도벽과의 상대 이동이 거의 없어 마찰 손상을 줄임" data-en="Almost no relative motion against the urethral wall, reducing friction damage">요도벽과의 상대 이동이 거의 없어 마찰 손상을 줄임</li>
           <li data-ko="약물·코팅이 아닌 삽입 구조 자체로 손상·감염 경로를 낮춤" data-en="Lowers the damage and infection pathway through structure, not drugs or coatings">약물이 아닌 구조로 손상·감염 경로를 낮춤</li>
           <li data-ko="전개 후단부가 방광 내벽에 밀착해 스스로 고정" data-en="The deployed end seats against the bladder wall and holds its own position">전개 후단부가 방광 내벽에 밀착해 스스로 고정</li>
+          <li data-ko="힘의 상한을 전개압이 고정 — 약 0.2 N, 임상 허용 한계 5 N의 4%" data-en="The force cap is set by the deployment pressure — about 0.2 N, 4% of the 5 N clinical limit">힘의 상한을 전개압이 고정 — 약 0.2 N, 임상 허용 한계 5 N의 4%</li>
         </ul>
       </div>
     </div>
 
     <div class="evidence">
       <strong data-ko="코팅만으로는 충분하지 않다는 근거" data-en="The evidence that coatings alone are not enough">코팅만으로는 충분하지 않다는 근거</strong>
-      <p data-ko="영국 다기관 무작위 대조시험(2012, 환자 7,102명)에서 은합금 코팅 카테터의 감염률은 12.5%, 일반 카테터는 12.6%로 사실상 차이가 없었습니다. 세계 최대 규모의 RCT가 내린 결론입니다." data-en="In a UK multicentre randomised controlled trial (2012, n = 7,102), silver-alloy coated catheters showed a 12.5% infection rate versus 12.6% for standard catheters — effectively no difference. That is the conclusion of the largest trial of its kind.">영국 다기관 RCT(2012, n=7,102): 은합금 코팅 12.5% vs 일반 12.6%.</p>
+      <p data-ko="영국 다기관 무작위 대조시험(2012, 환자 7,102명)에서 은합금 코팅 카테터의 감염률은 12.5%, 일반 카테터는 12.6%로 사실상 차이가 없었습니다. 세계 최대 규모의 RCT가 내린 결론입니다. 친수성 코팅도 마찰을 없애지는 못합니다 — 미세손상을 줄일 뿐이며, 자가도뇨 환자 36%는 여전히 삽입 통증을 호소합니다." data-en="In a UK multicentre randomised controlled trial (2012, n = 7,102), silver-alloy coated catheters showed a 12.5% infection rate versus 12.6% for standard catheters — effectively no difference. That is the conclusion of the largest trial of its kind. Hydrophilic coatings do not remove friction either — they only reduce micro-injury, and 36% of self-catheterising patients still report insertion pain.">영국 다기관 RCT(2012, n=7,102): 은합금 코팅 12.5% vs 일반 12.6%.</p>
     </div>
   </div>
 </section>
@@ -420,90 +472,103 @@
     <div class="head">
       <div class="eyebrow" data-ko="기술" data-en="Technology">기술</div>
       <h2 data-ko="Eversion — 튜브가 뒤집히며 스스로 자라납니다." data-en="Eversion — the tube turns itself inside out and grows.">Eversion — 튜브가 뒤집히며 스스로 자라납니다.</h2>
-      <p class="lead" data-ko="얇은 벽의 튜브를 안쪽으로 접어 넣고 내부에 유체를 공급합니다. 압력이 접힘부를 앞으로 밀어내면서 새로운 튜브 표면은 오직 선단부에서만 나타납니다. 이미 요도벽에 닿아 있는 부분은 전진 과정에서 움직이지 않습니다." data-en="A thin-walled tube is folded back on itself and fluid is supplied inside. Pressure drives the fold forward, so new tube surface appears only at the leading edge. The part already resting against the urethral wall does not move as the device advances.">얇은 튜브를 접어 넣고 유체를 공급하면, 접힘부가 앞으로 이동하며 전개됩니다.</p>
+      <p class="lead" data-ko="얇은 벽의 튜브를 안쪽으로 접어 넣고 생리식염수를 주입합니다. 압력이 접힘부를 앞으로 밀어내면서 새로운 튜브 표면은 오직 선단부에서만 나타나고, 이미 요도벽에 닿아 있는 부분은 전진 과정에서 움직이지 않습니다. 선단에 걸리는 힘은 전개압이 정하기 때문에 — 실측 전개압 10 kPa 기준 약 0.2 N — 시술자가 아무리 세게 밀어도 그 이상 커지지 않습니다." data-en="A thin-walled tube is folded back on itself and saline is injected. Pressure drives the fold forward, so new tube surface appears only at the leading edge, and the part already resting against the urethral wall does not move as the device advances. Because the force at the tip is set by the deployment pressure — about 0.2 N at the measured 10 kPa — it cannot grow beyond that, however hard an operator pushes.">얇은 튜브를 접어 넣고 식염수를 주입하면, 접힘부가 앞으로 이동하며 전개됩니다.</p>
     </div>
 
-    <!-- 3-step principle -->
-    <div class="steps">
-      <figure class="step">
-        <svg viewBox="0 0 280 170" role="img" aria-label="Step 1">
-          <path d="M20 57 H150 C166 57 166 75 150 75 H20 Z" fill="#dff0f5"/>
-          <path d="M20 113 H150 C166 113 166 95 150 95 H20 Z" fill="#dff0f5"/>
-          <rect x="20" y="75" width="135" height="20" fill="#eef4f9"/>
-          <path d="M20 57 H150 C166 57 166 75 150 75 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M20 113 H150 C166 113 166 95 150 95 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
-          <line x1="38" y1="85" x2="130" y2="85" stroke="#2f7fd6" stroke-width="2.4" marker-end="url(#mFlow)"/>
-        </svg>
-        <figcaption>
-          <span class="st" data-ko="① 유체 공급" data-en="1 · Fluid supply">① 유체 공급</span>
-          <span class="sd" data-ko="내부 유체 공급이 시작됩니다." data-en="Internal fluid supply begins.">내부 유체 공급이 시작됩니다.</span>
-        </figcaption>
-      </figure>
+    <!-- animated principle (drawn from the mechanism; not footage) -->
+    <figure class="diagram anim" id="evAnim">
+      <div class="anim-top">
+        <div class="anim-phase" id="animPhase" data-ko="① 식염수 주입" data-en="1 · Saline injection">① 식염수 주입</div>
+        <button type="button" class="anim-btn" id="animBtn" data-ko="일시정지" data-en="Pause">일시정지</button>
+      </div>
+      <div class="svg-wrap">
+      <svg viewBox="0 0 760 300" role="img" aria-labelledby="evAnimT">
+        <title id="evAnimT" data-ko="단면 애니메이션 — 식염수 압력으로 선단만 전진하고 요도벽에 닿은 외벽은 정지해 있는 eversion 전개" data-en="Cross-section animation — eversion deployment in which saline pressure advances only the tip while the outer wall resting on the urethra stays still">단면 애니메이션 — eversion 전개</title>
+        <defs>
+          <linearGradient id="gSaline" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#cfe3fa"/><stop offset="100%" stop-color="#a9cdf5"/></linearGradient>
+          <clipPath id="cArrows"><rect id="evClip" x="60" y="100" width="0" height="100"/></clipPath>
+        </defs>
+        <!-- bladder -->
+        <ellipse cx="686" cy="150" rx="66" ry="64" fill="#fdf1f1" stroke="#e3a8a5" stroke-width="3"/>
+        <!-- urethral tissue -->
+        <rect x="40" y="92" width="582" height="26" fill="#fbe9e7"/>
+        <rect x="40" y="182" width="582" height="26" fill="#fbe9e7"/>
+        <line x1="40" y1="118" x2="622" y2="118" stroke="#e3a8a5" stroke-width="2"/>
+        <line x1="40" y1="182" x2="622" y2="182" stroke="#e3a8a5" stroke-width="2"/>
+        <rect x="616" y="119.5" width="14" height="61" fill="#fdf1f1"/>
+        <text class="d-wall" x="586" y="84" text-anchor="middle" data-ko="요도벽" data-en="Urethral wall">요도벽</text>
+        <text class="d-label" x="686" y="250" text-anchor="middle" fill="#b4453c" data-ko="방광" data-en="Bladder">방광</text>
+        <!-- hub -->
+        <rect x="14" y="104" width="46" height="92" rx="7" fill="#11304f"/>
+        <path d="M0,150 H14" stroke="#2f7fd6" stroke-width="6" stroke-linecap="round"/>
+        <text class="d-sub" x="37" y="228" text-anchor="middle" data-ko="식염수 주입부" data-en="Saline inlet">식염수 주입부</text>
+        <!-- dynamic catheter -->
+        <g id="evBody">
+          <rect id="evCore" x="60" y="140" width="80" height="20" fill="#eef4f9"/>
+          <path id="evFluidT" fill="url(#gSaline)"/>
+          <path id="evFluidB" fill="url(#gSaline)"/>
+          <g id="evArrows" clip-path="url(#cArrows)" stroke="#2f7fd6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></g>
+          <path id="evWallT" fill="none" stroke="#0B1C33" stroke-width="3.5" stroke-linejoin="round"/>
+          <path id="evWallB" fill="none" stroke="#0B1C33" stroke-width="3.5" stroke-linejoin="round"/>
+          <g id="evBands"></g>
+          <ellipse id="evFlare" cx="640" cy="150" rx="14" ry="12" fill="rgba(13,143,146,.28)" stroke="#0d8f92" stroke-width="2.5" opacity="0"/>
+          <text id="evLblWall" class="d-tag" x="200" y="80" text-anchor="middle" opacity="0" data-ko="요도벽에 닿은 외벽은 움직이지 않습니다 — 띠의 위치가 그대로" data-en="The outer wall on the urethra does not move — the bands stay put">요도벽에 닿은 외벽은 움직이지 않습니다 — 띠의 위치가 그대로</text>
+          <text id="evLblIn" class="d-sub" x="200" y="236" text-anchor="middle" opacity="0" data-ko="안쪽 막이 선단으로 공급되어 뒤집히며 새 표면이 됩니다" data-en="The inner membrane feeds the tip, everts and becomes new surface">안쪽 막이 선단으로 공급되어 뒤집히며 새 표면이 됩니다</text>
+          <text id="evLblFix" class="d-tag" x="750" y="38" text-anchor="end" opacity="0" data-ko="방광 도달 · 전개 후단부가 자리를 잡습니다" data-en="Arrival — the deployed end seats itself">방광 도달 · 전개 후단부가 자리를 잡습니다</text>
+        </g>
+      </svg>
+      </div>
+      <div class="legend">
+        <span style="--sw:#0B1C33" data-ko="튜브 막 (한 장이 접혀 있음)" data-en="Tube membrane (one sheet, folded)">튜브 막 (한 장이 접혀 있음)</span>
+        <span style="--sw:#b9d6f6" data-ko="생리식염수 (가압)" data-en="Saline (pressurised)">생리식염수 (가압)</span>
+        <span style="--sw:#eef4f9" data-ko="중심 채널 (배출)" data-en="Central channel (drainage)">중심 채널 (배출)</span>
+        <span style="--sw:#fbe9e7" data-ko="요도벽" data-en="Urethral wall">요도벽</span>
+      </div>
+      <figcaption data-ko="원리에서 직접 그린 단면 애니메이션입니다(실물 촬영이 아님). 색 띠는 튜브 막 위의 같은 지점을 표시합니다 — 안쪽에 있을 때는 선단으로 이동하지만, 뒤집혀 요도벽에 닿는 순간부터는 제자리에 멈춥니다. 요도벽과의 상대 이동이 0이라는 뜻입니다." data-en="A cross-section animation drawn from the mechanism (not footage). The coloured bands mark fixed points on the membrane — they travel toward the tip while inside, and stop dead the moment they evert onto the urethral wall. That is zero relative motion against the urethra.">원리에서 직접 그린 단면 애니메이션입니다.</figcaption>
+    </figure>
 
-      <figure class="step">
-        <svg viewBox="0 0 280 170" role="img" aria-label="Step 2">
-          <path d="M20 57 H215 C231 57 231 75 215 75 H20 Z" fill="#dff0f5"/>
-          <path d="M20 113 H215 C231 113 231 95 215 95 H20 Z" fill="#dff0f5"/>
-          <rect x="20" y="75" width="200" height="20" fill="#eef4f9"/>
-          <path d="M20 57 H215 C231 57 231 75 215 75 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M20 113 H215 C231 113 231 95 215 95 H20" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linejoin="round"/>
-          <line x1="38" y1="85" x2="145" y2="85" stroke="#2f7fd6" stroke-width="2.4" marker-end="url(#mFlow)"/>
-          <path d="M201 73 C219 67 227 59 221 51" fill="none" stroke="#0d8f92" stroke-width="2.2" marker-end="url(#mRoll)"/>
-          <path d="M201 97 C219 103 227 111 221 119" fill="none" stroke="#0d8f92" stroke-width="2.2" marker-end="url(#mRoll)"/>
-        </svg>
-        <figcaption>
-          <span class="st" data-ko="② Eversion 전개" data-en="2 · Eversion deployment">② Eversion 전개</span>
-          <span class="sd" data-ko="내부 압력으로 선단부가 뒤집히며 무마찰로 전진합니다." data-en="Internal pressure everts the tip, which advances without friction.">내부 압력으로 선단부가 뒤집히며 무마찰로 전진합니다.</span>
-        </figcaption>
-      </figure>
-
-      <figure class="step">
-        <svg viewBox="0 0 280 170" role="img" aria-label="Step 3">
-          <ellipse cx="200" cy="85" rx="55" ry="48" fill="#fdf1f1" stroke="#e3a8a5" stroke-width="3.5"/>
-          <circle cx="200" cy="85" r="30" fill="#dff0f5" stroke="#0d8f92" stroke-width="3"/>
-          <rect x="20" y="75" width="130" height="20" fill="#eef4f9"/>
-          <path d="M20 57 H140 C158 57 162 66 166 72" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linecap="round"/>
-          <path d="M20 113 H140 C158 113 162 104 166 98" fill="none" stroke="#0B1C33" stroke-width="4" stroke-linecap="round"/>
-          <line x1="38" y1="85" x2="128" y2="85" stroke="#2f7fd6" stroke-width="2.4" marker-end="url(#mFlow)"/>
-          <text class="d-label" x="200" y="26" text-anchor="middle" fill="#b4453c" data-ko="방광" data-en="Bladder">방광</text>
-        </svg>
-        <figcaption>
-          <span class="st" data-ko="③ 방광 도달 · 고정" data-en="3 · Arrival and fixation">③ 방광 도달 · 고정</span>
-          <span class="sd" data-ko="전개 후단부가 방광 내벽에 밀착해 위치를 고정합니다." data-en="The deployed end seats against the bladder wall and holds position.">전개 후단부가 방광 내벽에 밀착해 위치를 고정합니다.</span>
-        </figcaption>
-      </figure>
+    <div class="grid-2 tech-row">
+      <div class="card">
+        <div class="num" data-ko="숫자로 보는 전개" data-en="Deployment in numbers">숫자로 보는 전개</div>
+        <dl class="kv">
+          <div><dt>10 kPa</dt><dd data-ko="실측 전개압. 생리식염수 주사기 하나로 전개되며 오일·약물·전동 장치가 없습니다." data-en="Measured deployment pressure. Deployed with a single saline syringe — no oil, drug or motor.">실측 전개압.</dd></div>
+          <div><dt>≈ 0.2 N</dt><dd data-ko="선단 추진력 상한 = 전개압 × 단면적(지름 5 mm 기준 19.6 mm²). 압력이 힘의 상한을 고정합니다." data-en="Upper bound of tip force = pressure × cross-section (19.6 mm² at 5 mm diameter). The pressure caps the force.">선단 추진력 상한.</dd></div>
+          <div><dt>4%</dt><dd data-ko="임상 허용 삽입력 5 N 대비 비율. 요도 내강을 최대로 가정한 지름 8 mm에서도 약 0.5 N, 한계의 10%입니다." data-en="Share of the 5 N clinical insertion-force limit. Even at 8 mm diameter — the widest urethral lumen — it is about 0.5 N, 10% of the limit.">임상 허용 삽입력 5 N 대비.</dd></div>
+        </dl>
+        <div class="formula">F = P × A = 10 kPa × 19.6 mm² ≈ 0.2 N</div>
+      </div>
+      <div class="card">
+        <div class="num" data-ko="구성과 소재" data-en="Construction and material">구성과 소재</div>
+        <h3 data-ko="식염수 주사기 하나로 전개되는 1회용 키트" data-en="A single-use kit deployed with one saline syringe">식염수 주사기 하나로 전개되는 1회용 키트</h3>
+        <p data-ko="전개 카테터는 Elastomer 연결부, eversion 전개관, 후방 관통 내부관(배출)으로 이루어지며, 지혈 밸브·연결 튜브와 함께 1회용 키트로 구성됩니다. 범용 생리식염수 주사기를 측면 주입 포트에 연결해 미는 압력만으로 전개됩니다." data-en="The deployment catheter consists of an elastomer connector, the everting tube and a through-bore inner tube for drainage, supplied as a single-use kit with a hemostasis valve and connecting tube. A standard saline syringe on the side port provides all the pressure needed.">전개 카테터·지혈 밸브·연결 튜브의 1회용 키트입니다.</p>
+        <p style="margin-top:12px" data-ko="전개 튜브 소재는 의료용 액상 실리콘(LSR)으로, 원재료 기준 USP Class VI 및 ISO 10993 세포독성·감작성·자극성 시험을 마친 등급입니다. 완제품의 생체적합성은 별도로 평가할 예정입니다." data-en="The everting tube is medical-grade liquid silicone rubber (LSR), a grade that has passed USP Class VI and ISO 10993 cytotoxicity, sensitisation and irritation testing at the raw-material level. Finished-device biocompatibility will be evaluated separately.">소재는 의료용 LSR이며, 완제품 생체적합성은 별도 평가 예정입니다.</p>
+      </div>
     </div>
 
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-      <marker id="mFlow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2f7fd6"/></marker>
-      <marker id="mRoll" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0d8f92"/></marker>
-    </defs></svg>
-
-    <p class="dcap" data-ko="단면 모식도. 외벽(굵은 선)은 요도벽에 닿은 채 정지해 있고, 내부 압력이 선단의 접힘부만 앞으로 밀어냅니다. 중심부에는 유체 공급과 배출을 위한 채널이 그대로 남습니다." data-en="Schematic cross-sections. The outer wall (heavy line) rests against the urethra and stays still, while internal pressure drives only the fold at the tip forward. A channel remains open along the centre for fluid supply and drainage.">단면 모식도.</p>
 
     <div class="grid-3">
       <div class="card">
         <div class="num">A</div>
         <h3 data-ko="무마찰 전개" data-en="Friction-free deployment">무마찰 전개</h3>
-        <p data-ko="튜브가 안에서 밖으로 뒤집혀 자라나기 때문에 요도벽과의 상대 이동이 거의 없습니다. 밀어 넣는 삽입에서 손상을 만드는 벽면 마찰이 발생하지 않습니다." data-en="Because the tube grows by everting from the inside out, there is almost no relative motion against the urethral wall — removing the wall friction that causes damage during pushed insertion.">요도벽과의 상대 이동이 거의 없습니다.</p>
+        <p data-ko="튜브가 안에서 밖으로 뒤집혀 자라나기 때문에 요도벽과의 상대 이동이 없습니다. 밀어 넣는 삽입에서 손상을 만드는 벽면 마찰이 발생하지 않고, 삽입력 상한은 약 0.2 N으로 고정됩니다." data-en="Because the tube grows by everting from the inside out, there is no relative motion against the urethral wall — removing the wall friction that causes damage during pushed insertion, with the insertion force capped at about 0.2 N.">요도벽과의 상대 이동이 없습니다.</p>
       </div>
       <div class="card">
         <div class="num">B</div>
         <h3 data-ko="방광 내 자가 고정 전개" data-en="Self-anchoring deployment in the bladder">방광 내 자가 고정 전개</h3>
-        <p data-ko="전개된 후단부가 방광 내벽에 밀착하면서 별도의 조작 없이 위치가 안정적으로 고정됩니다." data-en="The deployed end seats against the bladder wall, holding position stably without a separate anchoring step.">전개 후단부가 방광 내벽에 밀착해 고정됩니다.</p>
+        <p data-ko="힘으로 밀지 않고 전개 선단이 방광에 도달해 자리를 잡습니다. 거짓통로와 협착을 만드는 밀어 넣기 자체가 없습니다." data-en="Nothing is pushed — the advancing tip simply arrives in the bladder and seats itself. The pushing that creates false passages and strictures is gone.">전개 선단이 방광에 도달해 자리를 잡습니다.</p>
       </div>
       <div class="card">
         <div class="num">C</div>
         <h3 data-ko="구조로 감염 저감" data-en="Infection reduction by structure">구조로 감염 저감</h3>
-        <p data-ko="코팅이나 약물이 아니라 삽입 구조 자체로 손상 경로를 줄입니다. 마찰 손상 부위가 줄어들면 세균이 침투할 입구도 줄어듭니다." data-en="The damage pathway is reduced by the insertion structure itself rather than by a coating or drug. Fewer friction injuries mean fewer entry points for bacteria.">삽입 구조 자체로 손상 경로를 줄입니다.</p>
+        <p data-ko="상처를 만들지 않아 세균이 침투할 입구를 없앱니다. 코팅(약물) 없이 2차 감염을 예방하는 접근이며, 코팅이 없기 때문에 인허가 경로도 단순해집니다." data-en="No wound, no entry point for bacteria. Secondary infection is prevented without a coating or drug — and because there is no coating, the regulatory pathway is simpler too.">상처를 만들지 않아 세균 침투 입구를 없앱니다.</p>
       </div>
     </div>
 
     <div class="grid-4" style="margin-top:22px">
       <div class="card"><div class="num" data-ko="구조 01" data-en="Structure 01">구조 01</div><h3 data-ko="본체부" data-en="Main body">본체부</h3><p data-ko="Eversion 전개 및 내부 채널 형성" data-en="Eversion deployment and formation of the internal channel">Eversion 전개 및 내부 채널 형성</p></div>
-      <div class="card"><div class="num" data-ko="구조 02" data-en="Structure 02">구조 02</div><h3 data-ko="확장부" data-en="Expansion section">확장부</h3><p data-ko="전개 전방까지 위치를 고정" data-en="Holds position through to the leading edge of deployment">전개 전방까지 위치를 고정</p></div>
-      <div class="card"><div class="num" data-ko="구조 03" data-en="Structure 03">구조 03</div><h3 data-ko="통로부" data-en="Supply channel">통로부</h3><p data-ko="내외부 유체 공급 경로" data-en="Internal and external fluid supply path">내외부 유체 공급 경로</p></div>
-      <div class="card"><div class="num" data-ko="구조 04" data-en="Structure 04">구조 04</div><h3 data-ko="유출부" data-en="Outlet">유출부</h3><p data-ko="유체 유도 및 배출 포트" data-en="Fluid guidance and drainage port">유체 유도 및 배출 포트</p></div>
+      <div class="card"><div class="num" data-ko="구조 02" data-en="Structure 02">구조 02</div><h3 data-ko="통로부" data-en="Supply channel">통로부</h3><p data-ko="식염수 주입 경로 (내·외부)" data-en="Saline injection path (inner and outer)">식염수 주입 경로 (내·외부)</p></div>
+      <div class="card"><div class="num" data-ko="구조 03" data-en="Structure 03">구조 03</div><h3 data-ko="유출부" data-en="Outlet">유출부</h3><p data-ko="식염수 유도 · 소변 배출 포트" data-en="Saline guidance and urine drainage port">식염수 유도 · 소변 배출 포트</p></div>
+      <div class="card"><div class="num" data-ko="구조 04" data-en="Structure 04">구조 04</div><h3 data-ko="확장부" data-en="Expansion section">확장부</h3><p data-ko="방광 내 고정 — 유치형(Foley)에만 추가되는 구조" data-en="Fixation inside the bladder — added only on the indwelling (Foley) version">방광 내 고정 — 유치형(Foley)에만 추가</p></div>
     </div>
   </div>
 </section>
@@ -514,22 +579,29 @@
     <div class="head">
       <div class="eyebrow" data-ko="제품" data-en="Products">제품</div>
       <h2 data-ko="하나의 eversion 구조에서 출발하는 제품군." data-en="A product family from one eversion structure.">하나의 eversion 구조에서 출발하는 제품군.</h2>
-      <p class="lead" data-ko="간헐적 자가도뇨용 1-way 제품을 먼저 제품화하고, 동일한 eversion 구조를 유치형과 상부 요로 시술로 확장합니다. 모든 제품은 연구·개발 단계에 있습니다." data-en="We are commercialising a 1-way product for intermittent self-catheterisation first, then extending the same eversion structure to indwelling and upper urinary tract procedures. All products are at the research and development stage.">1-way 제품을 먼저 제품화하고, 동일 구조를 확장합니다.</p>
+      <p class="lead" data-ko="자가도뇨용 1회용(CIC) 제품을 먼저 제품화하고, 동일한 eversion 구조를 병원 유치형(Foley)과 상부 요로(UAS)로 확장합니다. 모든 제품은 연구·개발 단계에 있습니다." data-en="We are commercialising a single-use product for intermittent self-catheterisation (CIC) first, then extending the same eversion structure to the indwelling (Foley) and upper-urinary-tract (UAS) versions. All products are at the research and development stage.">CIC 제품을 먼저 제품화하고, 동일 구조를 Foley와 UAS로 확장합니다.</p>
     </div>
     <div class="prod">
       <div>
-        <span class="badge lead-b" data-ko="리드 제품" data-en="Lead product">리드 제품</span>
-        <h3>Eversio-U</h3>
-        <div class="kicker" data-ko="무마찰 전개형 요도 카테터" data-en="Friction-free everting urinary catheter">무마찰 전개형 요도 카테터</div>
-        <p data-ko="간헐적 자가도뇨(1-way)용으로 먼저 제품화하고, 이후 동일한 eversion 구조를 2·3-way 유치형(Foley)으로 단계 확장합니다. 하루 4~6회, 평생 반복되는 삽입의 부담을 구조에서부터 줄이는 것이 목표입니다." data-en="First commercialised for intermittent self-catheterisation (1-way), then extended step by step to 2- and 3-way indwelling Foley configurations using the same eversion structure. The goal is to reduce the burden of an insertion repeated four to six times a day, for life — starting from the structure itself.">간헐적 자가도뇨(1-way)용으로 먼저 제품화합니다.</p>
+        <span class="badge lead-b" data-ko="리드 제품" data-en="Lead product">리드 제품</span><span class="badge next-b" data-ko="1단계" data-en="Stage 1">1단계</span>
+        <h3>Eversio-U CIC</h3>
+        <div class="kicker" data-ko="자가도뇨용 1회용 무마찰 전개형 요도 카테터" data-en="Single-use friction-free everting catheter for self-catheterisation">자가도뇨용 1회용 무마찰 전개형 요도 카테터</div>
+        <p data-ko="간헐적 자가도뇨 환자가 하루 4~6회 쓰는 1회용 제품입니다. 전개 카테터·지혈 밸브·연결 튜브로 구성된 키트를 범용 식염수 주사기로 전개합니다. 삽입·배뇨·폐기의 흐름은 기존과 같고, 밀어 넣는 과정만 사라집니다." data-en="A single-use product for patients who self-catheterise four to six times a day. A kit of deployment catheter, hemostasis valve and connecting tube, deployed with a standard saline syringe. Insert, void, discard — the routine is unchanged; only the pushing is gone.">하루 4~6회 쓰는 1회용 제품. 밀어 넣는 과정만 사라집니다.</p>
       </div>
       <div>
-        <span class="badge next-b" data-ko="확장 제품" data-en="Extension">확장 제품</span>
+        <span class="badge next-b" data-ko="확장 제품" data-en="Extension">확장 제품</span><span class="badge next-b" data-ko="2단계" data-en="Stage 2">2단계</span>
+        <h3>Eversio-U Foley</h3>
+        <div class="kicker" data-ko="병원 유치형 무마찰 전개형 요도 카테터" data-en="Indwelling friction-free everting catheter for hospital use">병원 유치형 무마찰 전개형 요도 카테터</div>
+        <p data-ko="거동이 어려운 입원 환자를 위한 유치형입니다. 같은 전개 구조에 방광 내 확장부만 더해 자리를 잡고, 며칠간 유치한 뒤 교체합니다. CIC 제품에서 검증한 구조를 그대로 가져와 1·2-way 수요를 함께 다룹니다." data-en="An indwelling version for hospitalised patients with limited mobility. The same deployment structure gains an expansion section that seats in the bladder, stays in place for several days and is then exchanged. It carries over the structure validated in the CIC product to cover both 1-way and 2-way demand.">같은 구조에 방광 내 확장부만 더한 유치형입니다.</p>
+      </div>
+      <div>
+        <span class="badge next-b" data-ko="확장 제품" data-en="Extension">확장 제품</span><span class="badge next-b" data-ko="3단계" data-en="Stage 3">3단계</span>
         <h3>Eversio-UAS</h3>
-        <div class="kicker" data-ko="무마찰 전개형 요관 접근 시스템" data-en="Friction-free everting ureteral access system">무마찰 전개형 요관 접근 시스템</div>
-        <p data-ko="전개 길이를 연장해 신장·요관 시술 접근까지 확장하는 제품입니다. 요도 카테터에서 검증한 동일한 eversion 구조를 상부 요로로 옮깁니다." data-en="Extending the deployment length to reach kidney and ureteral procedures, carrying the same eversion structure validated in the urinary catheter into the upper urinary tract.">전개 길이를 연장해 신장·요관 시술 접근까지 확장합니다.</p>
+        <div class="kicker" data-ko="무마찰 전개형 요관 접근 시스" data-en="Friction-free everting ureteral access sheath">무마찰 전개형 요관 접근 시스</div>
+        <p data-ko="전개 길이를 연장해 요관을 지나 신장까지 접근하는 요관 접근 시스(UAS)입니다. 기존 UAS는 삽입 과정에서 요관 손상이 생겨 시술을 전환하는 경우가 있습니다. 요도 카테터에서 검증한 동일한 eversion 원리를 상부 요로로 옮깁니다." data-en="A ureteral access sheath (UAS) that extends the deployment length through the ureter to the kidney. Conventional sheaths can injure the ureter on insertion, sometimes forcing a change of procedure. The same eversion principle validated in the urinary catheter moves to the upper urinary tract.">요관을 지나 신장까지 접근하는 요관 접근 시스입니다.</p>
       </div>
     </div>
+    <p class="note" data-ko="장기적으로는 같은 무마찰 전개 원리를 혈관 내 접근과 신경계 영역으로 확장하는 것을 목표로 합니다. 구조를 바꾸는 기술은 코팅과 달리 적응증을 옮겨도 그대로 적용됩니다." data-en="In the longer term we aim to extend the same friction-free deployment principle to intravascular access and neurological applications. Unlike a coating, a structural technology carries over intact when the indication changes.">장기적으로 혈관·신경계 영역으로 확장하는 것을 목표로 합니다.</p>
   </div>
 </section>
 
@@ -544,17 +616,17 @@
       <div class="asset">
         <div class="k" data-ko="원천연구" data-en="Foundational research">원천연구</div>
         <div class="v">Science Robotics (2023)</div>
-        <div class="d" data-ko="Eversion 구동에 관한 원천 연구 성과에서 출발했습니다." data-en="The technology originates from published research on eversion actuation.">Eversion 구동 원천 연구.</div>
+        <div class="d" data-ko="CTO의 원천 연구 — 가는 관이 스스로 뻗어 나가는 최소침습 eversion 전개." data-en="The CTO's foundational research — minimally invasive eversion in which a slender tube extends itself.">CTO의 원천 연구 — 최소침습 eversion 전개.</div>
       </div>
       <div class="asset">
         <div class="k" data-ko="특허" data-en="Patents">특허</div>
-        <div class="v" data-ko="특허 2건" data-en="2 patents">특허 2건</div>
-        <div class="d">PCT/KR2026/001910<br>EP4518955B1</div>
+        <div class="v" data-ko="등록 1 · 출원 2" data-en="1 granted · 2 pending">등록 1 · 출원 2</div>
+        <div class="d" data-ko="EP4518955B1 — 유럽 등록, eversion 원천 구조<br>PCT/KR2026/001910 — 국제 출원, 요도 카테터 적용<br>국내 출원 — DGIST · 연세의료원 공동" data-en="EP4518955B1 — granted in Europe, core eversion structure<br>PCT/KR2026/001910 — international filing, urinary catheter application<br>Korean filing — jointly with DGIST and Yonsei University Health System">EP4518955B1 · PCT/KR2026/001910 · 국내 출원</div>
       </div>
       <div class="asset">
         <div class="k" data-ko="임상 협력" data-en="Clinical partners">임상 협력</div>
         <div class="v" data-ko="협력 병원 2곳" data-en="2 partner hospitals">협력 병원 2곳</div>
-        <div class="d" data-ko="연세대 세브란스병원 · 서울아산병원" data-en="Severance Hospital, Yonsei University · Asan Medical Center">연세대 세브란스병원 · 서울아산병원</div>
+        <div class="d" data-ko="연세대 세브란스병원 · 서울아산병원 — 요도 모형 in-vitro 검증부터 다기관 처방 확대까지" data-en="Severance Hospital, Yonsei University · Asan Medical Center — from in-vitro validation in urethral models to multi-centre adoption">연세대 세브란스병원 · 서울아산병원</div>
       </div>
       <div class="asset">
         <div class="k" data-ko="제조 인프라" data-en="Manufacturing">제조 인프라</div>
@@ -604,14 +676,16 @@
       <h2 style="margin-bottom:22px" data-ko="무마찰 전개가 표준이 되는 카테터 시장을 만듭니다." data-en="Making friction-free deployment the standard in catheters.">무마찰 전개가 표준이 되는 카테터 시장을 만듭니다.</h2>
       <p data-ko="Eversio Medical은 DGIST에서 출발한 초기 단계 의료기기 팀입니다. Eversion 구동에 관한 원천 연구를 임상에서 쓰일 수 있는 카테터로 옮기는 일을 합니다." data-en="Eversio Medical is an early-stage medical device team out of DGIST, translating foundational research on eversion actuation into catheters that can be used in the clinic.">Eversio Medical은 DGIST에서 출발한 초기 단계 의료기기 팀입니다.</p>
       <p data-ko="코팅과 소재로 증상을 완화하는 대신, 삽입 구조를 바꿔 원인을 제거하는 길을 택했습니다. 설계와 해석, 그리고 요도 모형을 이용한 in-vitro 검증으로 성능을 확인한 뒤 단계적으로 인허가와 제품화로 나아갑니다." data-en="Instead of easing symptoms with coatings and materials, we chose to remove the cause by changing the insertion structure. Performance is confirmed through design, analysis, and in-vitro validation in urethral models before moving step by step toward regulatory approval and commercialisation.">삽입 구조를 바꿔 원인을 제거하는 길을 택했습니다.</p>
+      <p data-ko="2026년 9월 Working sample을 확보해 전개압 10 kPa를 실측했고, 같은 달 식약처로부터 2등급(비뇨기과용 범용 튜브·카테터) 동등성 관련 의견을 받았습니다. 코팅(약물)이 없는 구조이기 때문에, 임상시험 단계 없이 비임상 성능평가 자료로 품목허가를 받는 경로를 목표로 합니다." data-en="In September 2026 we completed a working sample and measured a 10 kPa deployment pressure, and in the same month received an opinion from the MFDS on Class II equivalence (general-purpose urological tubes and catheters). Because the structure carries no coating or drug, we are targeting a pathway to approval based on non-clinical performance data, without a clinical-trial stage.">2026년 9월 Working sample을 확보하고 식약처 2등급 동등성 관련 의견을 받았습니다.</p>
 
     </div>
 
     <div>
       <dl class="facts">
         <div><dt data-ko="회사명" data-en="Name">회사명</dt><dd>Eversio Medical</dd></div>
-        <div><dt data-ko="단계" data-en="Stage">단계</dt><dd data-ko="DGIST 예비창업" data-en="DGIST pre-startup">DGIST 예비창업</dd></div>
-        <div><dt data-ko="법인 설립" data-en="Incorporation">법인 설립</dt><dd><span class="tbd" data-ko="입력 필요" data-en="to be filled">입력 필요</span></dd></div>
+        <div><dt data-ko="단계" data-en="Stage">단계</dt><dd data-ko="DGIST 예비창업 · Working sample 확보" data-en="DGIST pre-startup · working sample achieved">DGIST 예비창업 · Working sample 확보</dd></div>
+        <div><dt data-ko="법인 설립" data-en="Incorporation">법인 설립</dt><dd data-ko="2026년 11월 예정" data-en="Planned for November 2026">2026년 11월 예정</dd></div>
+        <div><dt data-ko="인허가" data-en="Regulatory">인허가</dt><dd data-ko="식약처 2등급 동등성 관련 의견 확보 (2026.9)" data-en="MFDS Class II equivalence opinion (Sep 2026)">식약처 2등급 동등성 관련 의견 확보 (2026.9)</dd></div>
         <div><dt data-ko="소재지" data-en="Location">소재지</dt><dd data-ko="대구 · DGIST" data-en="Daegu · DGIST">대구 · DGIST</dd></div>
         <div><dt data-ko="분야" data-en="Field">분야</dt><dd data-ko="비뇨기 의료기기" data-en="Urological medical devices">비뇨기 의료기기</dd></div>
         <div><dt data-ko="리드 제품" data-en="Lead product">리드 제품</dt><dd>Eversio-U</dd></div>
@@ -622,28 +696,33 @@
    <div class="status">
       <div class="eyebrow" data-ko="개발 현황" data-en="Development status">개발 현황</div>
       <div class="tl">
-        <div class="now">
-          <div class="when">2026</div>
+        <div class="done">
+          <div class="when" data-ko="2026.9 · 완료" data-en="Sep 2026 · done">2026.9 · 완료</div>
           <h3 data-ko="Working sample" data-en="Working sample">Working sample</h3>
-          <p data-ko="자체 시제품 제작과 위탁 설계 고도화" data-en="In-house prototyping and outsourced design refinement">자체 시제품 제작 및 설계 고도화</p>
+          <p data-ko="자체 시제품 제작 · 전개압 10 kPa 실측 · 식약처 2등급 동등성 관련 의견 확보" data-en="In-house prototype · 10 kPa deployment pressure measured · MFDS Class II equivalence opinion obtained">자체 시제품 · 전개압 10 kPa 실측 · 식약처 2등급 의견 확보</p>
+        </div>
+        <div class="now">
+          <div class="when" data-ko="2026 Q4 · 진행 중" data-en="Q4 2026 · in progress">2026 Q4 · 진행 중</div>
+          <h3 data-ko="In-vitro 검증 · 법인 설립" data-en="In-vitro validation · incorporation">In-vitro 검증 · 법인 설립</h3>
+          <p data-ko="세브란스 비뇨의학과팀과 요도 모형 삽입력·성공률 검증 · KBIOHealth 위탁 설계 고도화(설계·해석·SOP) · 법인 설립 · 인증 사전상담 · 동등품목 비교표" data-en="Insertion-force and success-rate validation in urethral models with the Severance urology team · outsourced design refinement at KBIOHealth (design, analysis, SOP) · incorporation · pre-certification consultation · predicate comparison">요도 모형 검증 · KBIOHealth 설계 고도화 · 법인 설립 · 인증 사전상담</p>
         </div>
         <div>
-          <div class="when">2026 H2</div>
-          <h3 data-ko="In-vitro 검증" data-en="In-vitro validation">In-vitro 검증</h3>
-          <p data-ko="요도 모형을 이용한 삽입력 성능 검증" data-en="Insertion-force validation in urethral models">요도 모형 기반 삽입력 검증</p>
+          <div class="when">2027</div>
+          <h3 data-ko="시험 · 인증 준비" data-en="Testing and certification prep">시험 · 인증 준비</h3>
+          <p data-ko="금형 제작 · OEM 후보 선정 · 식약처 사전검토로 심사 경로 확정 · 생체적합성(ISO 10993)·성능시험 · 혁신의료기기 지정 신청 · 멸균 밸리데이션 · 기술문서" data-en="Tooling · OEM selection · MFDS pre-review to fix the pathway · biocompatibility (ISO 10993) and performance testing · innovative medical device designation · sterilisation validation · technical file">금형 · OEM 선정 · 식약처 사전검토 · ISO 10993·성능시험 · 기술문서</p>
         </div>
         <div>
-          <div class="when">2027–28</div>
-          <h3 data-ko="인허가 준비" data-en="Regulatory preparation">인허가 준비</h3>
-          <p data-ko="사전 품목분류 상담과 비임상 성능평가 자료 확보" data-en="Pre-submission classification consultation and non-clinical performance data">사전 품목분류 상담 · 비임상 성능평가</p>
+          <div class="when">2028</div>
+          <h3 data-ko="인증 · 국내 진입" data-en="Certification and domestic entry">인증 · 국내 진입</h3>
+          <p data-ko="2등급 인증 신청·완료 · 제조업 허가 · OEM 양산 착수 · 협력 병원 처방 개시 후 다기관 확대" data-en="Class II certification filed and completed · manufacturing licence · OEM production · first prescriptions at partner hospitals, then multi-centre expansion">2등급 인증 · 제조업 허가 · OEM 양산 · 협력 병원 처방 개시</p>
         </div>
         <div>
           <div class="when">2029~</div>
-          <h3 data-ko="제품화" data-en="Commercialisation">제품화</h3>
-          <p data-ko="허가 취득 후 국내 진입, 이후 UAS로 확장" data-en="Domestic entry after approval, then extension to UAS">허가 후 국내 진입 · UAS 확장</p>
+          <h3 data-ko="확장" data-en="Expansion">확장</h3>
+          <p data-ko="급여 등록 추진 · 유치형(Foley) 개발 · 해외 인증(CE·FDA) 준비 · Eversio-UAS 확장" data-en="Reimbursement registration · indwelling (Foley) development · CE and FDA preparation · extension to Eversio-UAS">급여 등록 · Foley 개발 · CE·FDA 준비 · UAS 확장</p>
         </div>
       </div>
-      <p class="note" data-ko="위 일정은 계획이며, 등급 분류와 심사 경로는 식약처 사전 품목분류 상담을 통해 확정될 예정입니다." data-en="The timeline above is a plan. Device classification and the review pathway will be confirmed through a pre-submission classification consultation with the MFDS.">위 일정은 계획입니다.</p>
+      <p class="note" data-ko="위 일정은 사업계획상 목표이며 변동될 수 있습니다. 2026년 9월 확보한 식약처 의견은 '비뇨기과용 범용 튜브·카테터(A57060.01) · 2등급'에 해당할 것으로 본다는 동등성 관련 의견으로, 확정 판정이 아닙니다. 심사 경로(비임상·임상 자료 필요 여부)는 식약처 사전검토를 통해 최종 확정됩니다." data-en="The timeline above reflects business-plan targets and may change. The MFDS opinion obtained in September 2026 indicates that the device is expected to fall under 'general-purpose urological tubes and catheters (A57060.01), Class II'; it is an equivalence-related opinion, not a final determination. The review pathway (whether non-clinical or clinical data are required) will be fixed through MFDS pre-review.">위 일정은 계획입니다.</p>
    </div>
   </div>
 </section>
@@ -725,6 +804,93 @@
       burger.setAttribute('aria-expanded','false');
     }
   });
+})();
+</script>
+<script>
+(function(){
+  var fig = document.getElementById('evAnim'); if(!fig) return;
+  var ns = 'http://www.w3.org/2000/svg';
+  var $ = function(id){ return document.getElementById(id); };
+  var core=$('evCore'), fT=$('evFluidT'), fB=$('evFluidB'), wT=$('evWallT'), wB=$('evWallB'),
+      bandsG=$('evBands'), arrowsG=$('evArrows'), clip=$('evClip'), flare=$('evFlare'),
+      lblWall=$('evLblWall'), lblIn=$('evLblIn'), lblFix=$('evLblFix'), body=$('evBody'),
+      phaseEl=$('animPhase'), btn=$('animBtn');
+  var X0=60, R=11, XMIN=150, XMAX=654, ARC=Math.PI*R;
+  var BANDS=[150,230,310,390,470,550], COLS=['#0d8f92','#b4453c'];
+  var PH=[{ko:'① 식염수 주입',en:'1 · Saline injection'},
+          {ko:'② Eversion 전개 — 외벽은 정지, 선단만 전진',en:'2 · Eversion — the wall stays still, only the tip advances'},
+          {ko:'③ 방광 도달 · 고정',en:'3 · Arrival in the bladder and fixation'}];
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function mk(c){ var r=document.createElementNS(ns,'rect'); r.setAttribute('width',8); r.setAttribute('height',9); r.setAttribute('rx',1.5); r.setAttribute('fill',c); bandsG.appendChild(r); return r; }
+  var bands = BANDS.map(function(X,i){ var c=COLS[i%2]; return {X:X, t:mk(c), b:mk(c), it:mk(c), ib:mk(c)}; });
+  var NA=9, arrows=[];
+  for(var k=0;k<NA;k++){ var p=document.createElementNS(ns,'path'); p.setAttribute('d','M0,0 h14 m0,0 l-5,-4 m5,4 l-5,4'); arrowsG.appendChild(p); arrows.push(p); }
+
+  function put(r,x,y,show){ if(show){ r.setAttribute('x',x-4); r.setAttribute('y',y-4.5); r.setAttribute('opacity',1);} else r.setAttribute('opacity',0); }
+  function lang(){ return (document.documentElement.lang||'ko').indexOf('en')===0?'en':'ko'; }
+  function setPhase(i){ if(setPhase.cur===i) return; setPhase.cur=i; phaseEl.setAttribute('data-ko',PH[i].ko); phaseEl.setAttribute('data-en',PH[i].en); phaseEl.textContent=PH[i][lang()]; }
+
+  function draw(xf, k, t){
+    var xo = xf - R;
+    core.setAttribute('width', Math.max(0, xo-X0));
+    fT.setAttribute('d','M'+X0+',118 H'+xo+' A'+R+','+R+' 0 0 1 '+xo+',140 H'+X0+' Z');
+    fB.setAttribute('d','M'+X0+',182 H'+xo+' A'+R+','+R+' 0 0 0 '+xo+',160 H'+X0+' Z');
+    wT.setAttribute('d','M'+X0+',118 H'+xo+' A'+R+','+R+' 0 0 1 '+xo+',140 H'+(X0+4));
+    wB.setAttribute('d','M'+X0+',182 H'+xo+' A'+R+','+R+' 0 0 0 '+xo+',160 H'+(X0+4));
+    clip.setAttribute('width', Math.max(0, xo-14-X0));
+    for(var i=0;i<bands.length;i++){
+      var bd=bands[i], X=bd.X;
+      if(X<=xo){ put(bd.t,X,118,true); put(bd.b,X,182,true); put(bd.it,0,0,false); put(bd.ib,0,0,false); }
+      else{
+        put(bd.t,0,0,false); put(bd.b,0,0,false);
+        var d=X-xo, xi = xo-(d-ARC);
+        var show = d>ARC && xi>=X0+6;
+        put(bd.it,xi,140,show); put(bd.ib,xi,160,show);
+      }
+    }
+    var span=70, off=(t*85)%span;
+    for(var a=0;a<NA;a++){
+      var ax = X0+10 + ((a*span+off)%(NA*span));
+      arrows[a].setAttribute('transform','translate('+ax+',129)');
+    }
+    var lw = Math.max(0,Math.min(1,(xo-300)/90));
+    lblWall.setAttribute('opacity', lw); lblIn.setAttribute('opacity', lw);
+    var lx = (X0+xo)/2; lblWall.setAttribute('x', lx); lblIn.setAttribute('x', lx);
+    flare.setAttribute('cx', xf-6); flare.setAttribute('rx', 14+18*k); flare.setAttribute('ry', 12+40*k);
+    flare.setAttribute('opacity', k>0?0.95:0);
+    lblFix.setAttribute('opacity', k);
+  }
+
+  if(reduce){ draw(520,0,0); setPhase(1); btn.style.display='none'; return; }
+
+  var T=[0.9,4.6,0.9,1.7,0.45], TOTAL=T.reduce(function(a,b){return a+b;},0);
+  function ease(p){ return p<.5 ? 2*p*p : 1-Math.pow(-2*p+2,2)/2; }
+  var running=true, visible=true, last=null, clock=0;
+  function frame(now){
+    if(last===null) last=now;
+    if(running && visible) clock += Math.min(0.05,(now-last)/1000);
+    last=now;
+    var t=clock%TOTAL, xf, k=0, op=1;
+    if(t<T[0]){ xf=XMIN; setPhase(0); }
+    else if(t<T[0]+T[1]){ xf=XMIN+(XMAX-XMIN)*ease((t-T[0])/T[1]); setPhase(1); }
+    else if(t<T[0]+T[1]+T[2]){ xf=XMAX; k=ease((t-T[0]-T[1])/T[2]); setPhase(2); }
+    else if(t<T[0]+T[1]+T[2]+T[3]){ xf=XMAX; k=1; setPhase(2); }
+    else { xf=XMAX; k=1; op=1-(t-T[0]-T[1]-T[2]-T[3])/T[4]; }
+    body.setAttribute('opacity', op);
+    draw(xf,k,clock);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  btn.addEventListener('click', function(){
+    running=!running;
+    var ko=running?'일시정지':'재생', en=running?'Pause':'Play';
+    btn.setAttribute('data-ko',ko); btn.setAttribute('data-en',en); btn.textContent=(lang()==='en')?en:ko;
+  });
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ visible = es[0].isIntersecting; }, {threshold:0.05}).observe(fig);
+  }
 })();
 </script>
 </body>
